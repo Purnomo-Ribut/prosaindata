@@ -1,0 +1,59 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/usr/local/lib/python3.9/dist-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.9/dist-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/usr/local/lib/python3.9/dist-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.9/dist-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/usr/local/lib/python3.9/dist-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.9/dist-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+title_input = input("Masukkan Abstrak Skripsi:\n")
+
+'''
+catatan input:
+sisinta um adalah sistem informasi berbasis website bertujuan untuk menampilkan data yang berkaitan dengan skripsi dan tugas akhir pada jurusan teknik elektro fakultas teknik universitas negeri malang. penggunaan sistem informasi sisinta memiliki potensi jika dikembangkan dengan mengklasifikasikan judul dan abstrak berdasarkan tema penelitiannya. tujuan penelitian ini adalah untuk menerapkan dan menguji performa algoritma decision tree classifier dalam mengklasifikasi judul skripsi dan tugas akhir, berdasarkan tema penelitian dalam kbk di jurusan teknik elektro ft um. decision tree classifier adalah algoritma supervised learning non-parametrik, yang digunakan untuk klasifikasi dan regresi. decision tree memiliki hierarki, struktur pohon, yang terdiri dari root node, branches, internal nodes dan leaf nodes. dengan menggunakan metode decision tree classifier dalam implementasinya diharapkan dapat memprediksi jenis kelompok bidang keahlian yang sesuai. data yang digunakan dalam penelitian sistem klasifikasi ini didapatkan dari database sisinta te-um berupa judul, abstrak, dan kbk yang terkait dengan tema penelitian pada skripsi dan tugas akhir tersebut.
+'''
+
+hasil = clf.predict_proba(vectorizer.transform([title_input]))
+
+print(f"Abstrak Skripsi: {title_input}")
+
+list1 = hasil.tolist()
+cls = clf.classes_
+list2 = cls.tolist()
+
+d = {"Kelompok Bidang Keahlian":list2,"Probability":list1[0]}
+df_proba = pd.DataFrame(d)
+
+print(df_proba.sort_values("Probability", ascending=False))
+------------------
+
+[0;31m[0m
+[0;31mStdinNotImplementedError[0mTraceback (most recent call last)
+[0;32m<ipython-input-24-ecf696568ddd>[0m in [0;36m<cell line: 1>[0;34m()[0m
+[0;32m----> 1[0;31m [0mtitle_input[0m [0;34m=[0m [0minput[0m[0;34m([0m[0;34m"Masukkan Abstrak Skripsi:\n"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      2[0m [0;34m[0m[0m
+[1;32m      3[0m '''
+[1;32m      4[0m [0mcatatan[0m [0minput[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0msisinta[0m [0mum[0m [0madalah[0m [0msistem[0m [0minformasi[0m [0mberbasis[0m [0mwebsite[0m [0mbertujuan[0m [0muntuk[0m [0mmenampilkan[0m [0mdata[0m [0myang[0m [0mberkaitan[0m [0mdengan[0m [0mskripsi[0m [0mdan[0m [0mtugas[0m [0makhir[0m [0mpada[0m [0mjurusan[0m [0mteknik[0m [0melektro[0m [0mfakultas[0m [0mteknik[0m [0muniversitas[0m [0mnegeri[0m [0mmalang[0m[0;34m.[0m [0mpenggunaan[0m [0msistem[0m [0minformasi[0m [0msisinta[0m [0mmemiliki[0m [0mpotensi[0m [0mjika[0m [0mdikembangkan[0m [0mdengan[0m [0mmengklasifikasikan[0m [0mjudul[0m [0mdan[0m [0mabstrak[0m [0mberdasarkan[0m [0mtema[0m [0mpenelitiannya[0m[0;34m.[0m [0mtujuan[0m [0mpenelitian[0m [0mini[0m [0madalah[0m [0muntuk[0m [0mmenerapkan[0m [0mdan[0m [0mmenguji[0m [0mperforma[0m [0malgoritma[0m [0mdecision[0m [0mtree[0m [0mclassifier[0m [0mdalam[0m [0mmengklasifikasi[0m [0mjudul[0m [0mskripsi[0m [0mdan[0m [0mtugas[0m [0makhir[0m[0;34m,[0m [0mberdasarkan[0m [0mtema[0m [0mpenelitian[0m [0mdalam[0m [0mkbk[0m [0mdi[0m [0mjurusan[0m [0mteknik[0m [0melektro[0m [0mft[0m [0mum[0m[0;34m.[0m [0mdecision[0m [0mtree[0m [0mclassifier[0m [0madalah[0m [0malgoritma[0m [0msupervised[0m [0mlearning[0m [0mnon[0m[0;34m-[0m[0mparametrik[0m[0;34m,[0m [0myang[0m [0mdigunakan[0m [0muntuk[0m [0mklasifikasi[0m [0mdan[0m [0mregresi[0m[0;34m.[0m [0mdecision[0m [0mtree[0m [0mmemiliki[0m [0mhierarki[0m[0;34m,[0m [0mstruktur[0m [0mpohon[0m[0;34m,[0m [0myang[0m [0mterdiri[0m [0mdari[0m [0mroot[0m [0mnode[0m[0;34m,[0m [0mbranches[0m[0;34m,[0m [0minternal[0m [0mnodes[0m [0mdan[0m [0mleaf[0m [0mnodes[0m[0;34m.[0m [0mdengan[0m [0mmenggunakan[0m [0mmetode[0m [0mdecision[0m [0mtree[0m [0mclassifier[0m [0mdalam[0m [0mimplementasinya[0m [0mdiharapkan[0m [0mdapat[0m [0mmemprediksi[0m [0mjenis[0m [0mkelompok[0m [0mbidang[0m [0mkeahlian[0m [0myang[0m [0msesuai[0m[0;34m.[0m [0mdata[0m [0myang[0m [0mdigunakan[0m [0mdalam[0m [0mpenelitian[0m [0msistem[0m [0mklasifikasi[0m [0mini[0m [0mdidapatkan[0m [0mdari[0m [0mdatabase[0m [0msisinta[0m [0mte[0m[0;34m-[0m[0mum[0m [0mberupa[0m [0mjudul[0m[0;34m,[0m [0mabstrak[0m[0;34m,[0m [0mdan[0m [0mkbk[0m [0myang[0m [0mterkait[0m [0mdengan[0m [0mtema[0m [0mpenelitian[0m [0mpada[0m [0mskripsi[0m [0mdan[0m [0mtugas[0m [0makhir[0m [0mtersebut[0m[0;34m.[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.9/dist-packages/ipykernel/kernelbase.py[0m in [0;36mraw_input[0;34m(self, prompt)[0m
+[1;32m    846[0m         """
+[1;32m    847[0m         [0;32mif[0m [0;32mnot[0m [0mself[0m[0;34m.[0m[0m_allow_stdin[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 848[0;31m             raise StdinNotImplementedError(
+[0m[1;32m    849[0m                 [0;34m"raw_input was called, but this frontend does not support input requests."[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    850[0m             )
+
+[0;31mStdinNotImplementedError[0m: raw_input was called, but this frontend does not support input requests.
+StdinNotImplementedError: raw_input was called, but this frontend does not support input requests.
+
