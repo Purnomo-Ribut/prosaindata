@@ -71,14 +71,14 @@ df_postEle
 [0;31m[0m
 [0;31mAssertionError[0mTraceback (most recent call last)
 [0;32m/usr/local/lib/python3.9/dist-packages/pandas/core/internals/construction.py[0m in [0;36m_finalize_columns_and_data[0;34m(content, columns, dtype)[0m
-[1;32m    981[0m     [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 982[0;31m         [0mcolumns[0m [0;34m=[0m [0m_validate_or_indexify_columns[0m[0;34m([0m[0mcontents[0m[0;34m,[0m [0mcolumns[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    983[0m     [0;32mexcept[0m [0mAssertionError[0m [0;32mas[0m [0merr[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    968[0m     [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 969[0;31m         [0mcolumns[0m [0;34m=[0m [0m_validate_or_indexify_columns[0m[0;34m([0m[0mcontents[0m[0;34m,[0m [0mcolumns[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    970[0m     [0;32mexcept[0m [0mAssertionError[0m [0;32mas[0m [0merr[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
 [0;32m/usr/local/lib/python3.9/dist-packages/pandas/core/internals/construction.py[0m in [0;36m_validate_or_indexify_columns[0;34m(content, columns)[0m
-[1;32m   1029[0m             [0;31m# caller's responsibility to check for this...[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 1030[0;31m             raise AssertionError(
-[0m[1;32m   1031[0m                 [0;34mf"{len(columns)} columns passed, passed data had "[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1016[0m             [0;31m# caller's responsibility to check for this...[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1017[0;31m             raise AssertionError(
+[0m[1;32m   1018[0m                 [0;34mf"{len(columns)} columns passed, passed data had "[0m[0;34m[0m[0;34m[0m[0m
 
 [0;31mAssertionError[0m: 5 columns passed, passed data had 1 columns
 
@@ -99,32 +99,32 @@ The above exception was the direct cause of the following exception:
 [1;32m     42[0m [0;34m[0m[0m
 
 [0;32m/usr/local/lib/python3.9/dist-packages/pandas/core/frame.py[0m in [0;36m__init__[0;34m(self, data, index, columns, dtype, copy)[0m
-[1;32m    719[0m                         [0;31m# ndarray], Index, Series], Sequence[Any]]"[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    720[0m                         [0mcolumns[0m [0;34m=[0m [0mensure_index[0m[0;34m([0m[0mcolumns[0m[0;34m)[0m  [0;31m# type: ignore[arg-type][0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 721[0;31m                     arrays, columns, index = nested_data_to_arrays(
-[0m[1;32m    722[0m                         [0;31m# error: Argument 3 to "nested_data_to_arrays" has incompatible[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    723[0m                         [0;31m# type "Optional[Collection[Any]]"; expected "Optional[Index]"[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    744[0m                     [0;32mif[0m [0mcolumns[0m [0;32mis[0m [0;32mnot[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    745[0m                         [0mcolumns[0m [0;34m=[0m [0mensure_index[0m[0;34m([0m[0mcolumns[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 746[0;31m                     arrays, columns, index = nested_data_to_arrays(
+[0m[1;32m    747[0m                         [0;31m# error: Argument 3 to "nested_data_to_arrays" has incompatible[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    748[0m                         [0;31m# type "Optional[Collection[Any]]"; expected "Optional[Index]"[0m[0;34m[0m[0;34m[0m[0m
 
 [0;32m/usr/local/lib/python3.9/dist-packages/pandas/core/internals/construction.py[0m in [0;36mnested_data_to_arrays[0;34m(data, columns, index, dtype)[0m
-[1;32m    517[0m         [0mcolumns[0m [0;34m=[0m [0mensure_index[0m[0;34m([0m[0mdata[0m[0;34m[[0m[0;36m0[0m[0;34m][0m[0;34m.[0m[0m_fields[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    518[0m [0;34m[0m[0m
-[0;32m--> 519[0;31m     [0marrays[0m[0;34m,[0m [0mcolumns[0m [0;34m=[0m [0mto_arrays[0m[0;34m([0m[0mdata[0m[0;34m,[0m [0mcolumns[0m[0;34m,[0m [0mdtype[0m[0;34m=[0m[0mdtype[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    520[0m     [0mcolumns[0m [0;34m=[0m [0mensure_index[0m[0;34m([0m[0mcolumns[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    521[0m [0;34m[0m[0m
+[1;32m    508[0m         [0mcolumns[0m [0;34m=[0m [0mensure_index[0m[0;34m([0m[0mdata[0m[0;34m[[0m[0;36m0[0m[0;34m][0m[0;34m.[0m[0m_fields[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    509[0m [0;34m[0m[0m
+[0;32m--> 510[0;31m     [0marrays[0m[0;34m,[0m [0mcolumns[0m [0;34m=[0m [0mto_arrays[0m[0;34m([0m[0mdata[0m[0;34m,[0m [0mcolumns[0m[0;34m,[0m [0mdtype[0m[0;34m=[0m[0mdtype[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    511[0m     [0mcolumns[0m [0;34m=[0m [0mensure_index[0m[0;34m([0m[0mcolumns[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    512[0m [0;34m[0m[0m
 
 [0;32m/usr/local/lib/python3.9/dist-packages/pandas/core/internals/construction.py[0m in [0;36mto_arrays[0;34m(data, columns, dtype)[0m
-[1;32m    881[0m         [0marr[0m [0;34m=[0m [0m_list_to_arrays[0m[0;34m([0m[0mdata[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    882[0m [0;34m[0m[0m
-[0;32m--> 883[0;31m     [0mcontent[0m[0;34m,[0m [0mcolumns[0m [0;34m=[0m [0m_finalize_columns_and_data[0m[0;34m([0m[0marr[0m[0;34m,[0m [0mcolumns[0m[0;34m,[0m [0mdtype[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    884[0m     [0;32mreturn[0m [0mcontent[0m[0;34m,[0m [0mcolumns[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    885[0m [0;34m[0m[0m
+[1;32m    873[0m         [0marr[0m [0;34m=[0m [0m_list_to_arrays[0m[0;34m([0m[0mdata[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    874[0m [0;34m[0m[0m
+[0;32m--> 875[0;31m     [0mcontent[0m[0;34m,[0m [0mcolumns[0m [0;34m=[0m [0m_finalize_columns_and_data[0m[0;34m([0m[0marr[0m[0;34m,[0m [0mcolumns[0m[0;34m,[0m [0mdtype[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    876[0m     [0;32mreturn[0m [0mcontent[0m[0;34m,[0m [0mcolumns[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    877[0m [0;34m[0m[0m
 
 [0;32m/usr/local/lib/python3.9/dist-packages/pandas/core/internals/construction.py[0m in [0;36m_finalize_columns_and_data[0;34m(content, columns, dtype)[0m
-[1;32m    983[0m     [0;32mexcept[0m [0mAssertionError[0m [0;32mas[0m [0merr[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    984[0m         [0;31m# GH#26429 do not raise user-facing AssertionError[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 985[0;31m         [0;32mraise[0m [0mValueError[0m[0;34m([0m[0merr[0m[0;34m)[0m [0;32mfrom[0m [0merr[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    986[0m [0;34m[0m[0m
-[1;32m    987[0m     [0;32mif[0m [0mlen[0m[0;34m([0m[0mcontents[0m[0;34m)[0m [0;32mand[0m [0mcontents[0m[0;34m[[0m[0;36m0[0m[0;34m][0m[0;34m.[0m[0mdtype[0m [0;34m==[0m [0mnp[0m[0;34m.[0m[0mobject_[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    970[0m     [0;32mexcept[0m [0mAssertionError[0m [0;32mas[0m [0merr[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    971[0m         [0;31m# GH#26429 do not raise user-facing AssertionError[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 972[0;31m         [0;32mraise[0m [0mValueError[0m[0;34m([0m[0merr[0m[0;34m)[0m [0;32mfrom[0m [0merr[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    973[0m [0;34m[0m[0m
+[1;32m    974[0m     [0;32mif[0m [0mlen[0m[0;34m([0m[0mcontents[0m[0;34m)[0m [0;32mand[0m [0mcontents[0m[0;34m[[0m[0;36m0[0m[0;34m][0m[0;34m.[0m[0mdtype[0m [0;34m==[0m [0mnp[0m[0;34m.[0m[0mobject_[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
 [0;31mValueError[0m: 5 columns passed, passed data had 1 columns
 ValueError: 5 columns passed, passed data had 1 columns

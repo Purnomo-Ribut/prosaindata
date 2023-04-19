@@ -168,6 +168,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="UTS_PSD.html"><strong>Tugas Pra UTS</strong> (1 Prepocessing)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UTS2-PSD.html"><strong>Tugas Pra UTS</strong> (2 Modeling)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UTS.html"><strong>UTS</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas6.html">Tugas PAGERANK</a></li>
+
+
 </ul>
 
     </div>
@@ -409,16 +412,16 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: requests in /usr/local/lib/python3.9/dist-packages (2.27.1)
 Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests) (1.26.15)
-Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.9/dist-packages (from requests) (2.0.12)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests) (3.4)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.9/dist-packages (from requests) (2.0.12)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests) (2022.12.7)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: pandas in /usr/local/lib/python3.9/dist-packages (1.4.4)
-Requirement already satisfied: numpy&gt;=1.18.5 in /usr/local/lib/python3.9/dist-packages (from pandas) (1.22.4)
-Requirement already satisfied: python-dateutil&gt;=2.8.1 in /usr/local/lib/python3.9/dist-packages (from pandas) (2.8.2)
+Requirement already satisfied: pandas in /usr/local/lib/python3.9/dist-packages (1.5.3)
+Requirement already satisfied: numpy&gt;=1.20.3 in /usr/local/lib/python3.9/dist-packages (from pandas) (1.22.4)
 Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.9/dist-packages (from pandas) (2022.7.1)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in /usr/local/lib/python3.9/dist-packages (from pandas) (2.8.2)
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-packages (from python-dateutil&gt;=2.8.1-&gt;pandas) (1.16.0)
 </pre></div>
 </div>
@@ -428,22 +431,23 @@ Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.9/dist
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Collecting snscrape
-  Downloading snscrape-0.6.2.20230320-py3-none-any.whl (71 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/71.8 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">71.8/71.8 KB</span> <span class=" -Color -Color-Red">3.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: filelock in /usr/local/lib/python3.9/dist-packages (from snscrape) (3.10.7)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting snscrape
+  Downloading snscrape-0.6.2.20230320-py3-none-any.whl (71 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/71.8 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">71.8/71.8 kB</span> <span class=" -Color -Color-Red">2.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.11.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: requests[socks] in /usr/local/lib/python3.9/dist-packages (from snscrape) (2.27.1)
 Requirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.9.2)
-Requirement already satisfied: requests[socks] in /usr/local/lib/python3.9/dist-packages (from snscrape) (2.27.1)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.11.2)
+Requirement already satisfied: filelock in /usr/local/lib/python3.9/dist-packages (from snscrape) (3.11.0)
 Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.9/dist-packages (from beautifulsoup4-&gt;snscrape) (2.4)
-Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2.0.12)
 Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.26.15)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (3.4)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (3.4)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2.0.12)
 Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.7.1)
 </pre></div>
 </div>
@@ -485,7 +489,7 @@ Successfully installed snscrape-0.6.2.20230320
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-3e826ba9-29b6-4f60-8287-f89d9cec0a22">
+  <div id="df-827a71da-25ae-4093-ac86-7365718e46c9">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -549,39 +553,39 @@ Successfully installed snscrape-0.6.2.20230320
     </tr>
     <tr>
       <th>495</th>
-      <td>VIVAcoid</td>
-      <td>Dinilai Sudah Teruji, Index's Jagokan Cak Imin...</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>496</th>
-      <td>HasanudinTiro</td>
-      <td>Dapat Dukungan Maju Jadi Capres 2024, Cak Imin...</td>
-      <td>DKI Jakarta, Indonesia</td>
-    </tr>
-    <tr>
-      <th>497</th>
       <td>PejuangRp20</td>
       <td>Kyai Yahya Cholil saat pencalonan ketum PBNU a...</td>
       <td>Purbalingga, Indonesia</td>
     </tr>
     <tr>
-      <th>498</th>
+      <th>496</th>
       <td>awemany</td>
       <td>Ternyata ada Aa Gym sementara ET ngga jadi had...</td>
       <td></td>
     </tr>
     <tr>
-      <th>499</th>
+      <th>497</th>
       <td>kaankahfi</td>
       <td>@democrazymedia CAK IMIN YG NYURI PKB DARI GUS...</td>
       <td>Jakarta</td>
+    </tr>
+    <tr>
+      <th>498</th>
+      <td>ZainalAbdiAlam4</td>
+      <td>Tanggapi Jokowi-Soeharto Disandingkan...\nCak ...</td>
+      <td>DKI Jakarta, Indonesia</td>
+    </tr>
+    <tr>
+      <th>499</th>
+      <td>democrazymedia</td>
+      <td>Tanggapi Jokowi-Soeharto Disandingkan, Cak Imi...</td>
+      <td>Indonesia</td>
     </tr>
   </tbody>
 </table>
 <p>500 rows × 3 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-3e826ba9-29b6-4f60-8287-f89d9cec0a22')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-827a71da-25ae-4093-ac86-7365718e46c9')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -632,12 +636,12 @@ Successfully installed snscrape-0.6.2.20230320
 
       <script>
         const buttonEl =
-          document.querySelector('#df-3e826ba9-29b6-4f60-8287-f89d9cec0a22 button.colab-df-convert');
+          document.querySelector('#df-827a71da-25ae-4093-ac86-7365718e46c9 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-3e826ba9-29b6-4f60-8287-f89d9cec0a22');
+          const element = document.querySelector('#df-827a71da-25ae-4093-ac86-7365718e46c9');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
