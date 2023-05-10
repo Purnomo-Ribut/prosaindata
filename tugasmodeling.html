@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tugas Crawling Komentar Youtube &#8212; Purnomo Ribut | PSD B</title>
+    <title>Modeling &#8212; Purnomo Ribut | PSD B</title>
   
   
   
@@ -170,13 +170,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="tugas6.html"><strong>Tugas PAGERANK</strong></a></li>
 
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas Crawling Komentar Youtube</a></li>
-
-
-
-
-
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Modeling</strong></a></li>
 </ul>
 
     </div>
@@ -391,7 +385,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tugas Crawling Komentar Youtube</h1>
+    <h1>Modeling</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -401,15 +395,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Tugas Crawling Komentar Youtube</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing"><strong>Preprocessing</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#word-normalization">Word Normalization</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#stopwords-removal"><strong>Stopwords Removal</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#stemming"><strong>Stemming</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pembobotan-kata"><strong>Pembobotan Kata</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#latent-semantic-indexing-using-scikit-learn"><strong>Latent Semantic Indexing using Scikit-Learn</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-crawling-komentar-youtube">Tugas Crawling Komentar Youtube</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing"><strong>Preprocessing</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#word-normalization">Word Normalization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stopwords-removal"><strong>Stopwords Removal</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stemming"><strong>Stemming</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembobotan-kata"><strong>Pembobotan Kata</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latent-semantic-indexing-using-scikit-learn"><strong>Latent Semantic Indexing using Scikit-Learn</strong></a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -420,7 +413,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="cell docutils container">
+  <div class="tex2jax_ignore mathjax_ignore section" id="modeling">
+<h1><strong>Modeling</strong><a class="headerlink" href="#modeling" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
 <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
@@ -485,7 +480,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-pac
 </div>
 </div>
 <div class="section" id="tugas-crawling-komentar-youtube">
-<h1>Tugas Crawling Komentar Youtube<a class="headerlink" href="#tugas-crawling-komentar-youtube" title="Permalink to this heading">#</a></h1>
+<h2>Tugas Crawling Komentar Youtube<a class="headerlink" href="#tugas-crawling-komentar-youtube" title="Permalink to this heading">#</a></h2>
 <p>langkah yang dilakukan dalam mengaktivasi API Google</p>
 <ul class="simple">
 <li><p>Login ke Goggle Developer Console dengan akun Google
@@ -1074,7 +1069,7 @@ Link :
 </div>
 </div>
 <div class="section" id="preprocessing">
-<h1><strong>Preprocessing</strong><a class="headerlink" href="#preprocessing" title="Permalink to this heading">#</a></h1>
+<h2><strong>Preprocessing</strong><a class="headerlink" href="#preprocessing" title="Permalink to this heading">#</a></h2>
 <p>Text Cleaning</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1389,7 +1384,7 @@ Name: Komentar, dtype: object
 </div>
 </div>
 <div class="section" id="word-normalization">
-<h1>Word Normalization<a class="headerlink" href="#word-normalization" title="Permalink to this heading">#</a></h1>
+<h2>Word Normalization<a class="headerlink" href="#word-normalization" title="Permalink to this heading">#</a></h2>
 <p><strong>Normalisasi Kata Tidak Baku</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1504,7 +1499,7 @@ Name: comment_normalize, dtype: object
 <p><strong>Tokenizing</strong> (ada diatas)</p>
 </div>
 <div class="section" id="stopwords-removal">
-<h1><strong>Stopwords Removal</strong><a class="headerlink" href="#stopwords-removal" title="Permalink to this heading">#</a></h1>
+<h2><strong>Stopwords Removal</strong><a class="headerlink" href="#stopwords-removal" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Stopword Removal</span>
@@ -1782,7 +1777,7 @@ Name: stopwords_removal_final, dtype: object
 </div>
 </div>
 <div class="section" id="stemming">
-<h1><strong>Stemming</strong><a class="headerlink" href="#stemming" title="Permalink to this heading">#</a></h1>
+<h2><strong>Stemming</strong><a class="headerlink" href="#stemming" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#proses stem</span>
@@ -2444,7 +2439,7 @@ Name: stemming, dtype: object
 </div>
 </div>
 <div class="section" id="pembobotan-kata">
-<h1><strong>Pembobotan Kata</strong><a class="headerlink" href="#pembobotan-kata" title="Permalink to this heading">#</a></h1>
+<h2><strong>Pembobotan Kata</strong><a class="headerlink" href="#pembobotan-kata" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">joinkata</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
@@ -2988,7 +2983,7 @@ Name: stemming, dtype: object
 </div>
 </div>
 <div class="section" id="latent-semantic-indexing-using-scikit-learn">
-<h1><strong>Latent Semantic Indexing using Scikit-Learn</strong><a class="headerlink" href="#latent-semantic-indexing-using-scikit-learn" title="Permalink to this heading">#</a></h1>
+<h2><strong>Latent Semantic Indexing using Scikit-Learn</strong><a class="headerlink" href="#latent-semantic-indexing-using-scikit-learn" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
@@ -3034,6 +3029,7 @@ Topic 7:  [&#39;beliau&#39;, &#39;yg&#39;, &#39;ganti&#39;, &#39;ndukung&#39;, &
 Topic 8:  [&#39;merah&#39;, &#39;plecidenan&#39;, &#39;pleciden&#39;, &#39;angel&#39;, &#39;yes&#39;]
 Topic 9:  [&#39;ya&#39;, &#39;kejang&#39;, &#39;udh&#39;, &#39;merah&#39;, &#39;plecidenan&#39;]
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -3097,15 +3093,14 @@ Topic 9:  [&#39;ya&#39;, &#39;kejang&#39;, &#39;udh&#39;, &#39;merah&#39;, &#39;
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Tugas Crawling Komentar Youtube</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing"><strong>Preprocessing</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#word-normalization">Word Normalization</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#stopwords-removal"><strong>Stopwords Removal</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#stemming"><strong>Stemming</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pembobotan-kata"><strong>Pembobotan Kata</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#latent-semantic-indexing-using-scikit-learn"><strong>Latent Semantic Indexing using Scikit-Learn</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-crawling-komentar-youtube">Tugas Crawling Komentar Youtube</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing"><strong>Preprocessing</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#word-normalization">Word Normalization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stopwords-removal"><strong>Stopwords Removal</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stemming"><strong>Stemming</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembobotan-kata"><strong>Pembobotan Kata</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latent-semantic-indexing-using-scikit-learn"><strong>Latent Semantic Indexing using Scikit-Learn</strong></a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
