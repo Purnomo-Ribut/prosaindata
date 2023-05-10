@@ -168,7 +168,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="UTS_PSD.html"><strong>Tugas Pra UTS</strong> (1 Prepocessing)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UTS2-PSD.html"><strong>Tugas Pra UTS</strong> (2 Modeling)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UTS.html"><strong>UTS</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas6.html">Tugas PAGERANK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas6.html"><strong>Tugas PAGERANK</strong></a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="tugasmodeling.html">Tugas Crawling Komentar Youtube</a></li>
+
+
+
+
 
 
 </ul>
@@ -408,15 +415,15 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: psycopg2 in /usr/local/lib/python3.9/dist-packages (2.9.6)
+Requirement already satisfied: psycopg2 in /usr/local/lib/python3.10/dist-packages (2.9.6)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: pandas in /usr/local/lib/python3.9/dist-packages (1.5.3)
-Requirement already satisfied: python-dateutil&gt;=2.8.1 in /usr/local/lib/python3.9/dist-packages (from pandas) (2.8.2)
-Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.9/dist-packages (from pandas) (2022.7.1)
-Requirement already satisfied: numpy&gt;=1.20.3 in /usr/local/lib/python3.9/dist-packages (from pandas) (1.22.4)
-Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-packages (from python-dateutil&gt;=2.8.1-&gt;pandas) (1.16.0)
+Requirement already satisfied: pandas in /usr/local/lib/python3.10/dist-packages (1.5.3)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in /usr/local/lib/python3.10/dist-packages (from pandas) (2.8.2)
+Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas) (2022.7.1)
+Requirement already satisfied: numpy&gt;=1.21.0 in /usr/local/lib/python3.10/dist-packages (from pandas) (1.22.4)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.8.1-&gt;pandas) (1.16.0)
 </pre></div>
 </div>
 </div>
@@ -483,12 +490,12 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-pack
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">AssertionError</span>Traceback (most recent call last)
-<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/internals/construction.py</span> in <span class="ni">_finalize_columns_and_data</span><span class="nt">(content, columns, dtype)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/core/internals/construction.py</span> in <span class="ni">_finalize_columns_and_data</span><span class="nt">(content, columns, dtype)</span>
 <span class="g g-Whitespace">    </span><span class="mi">968</span>     <span class="k">try</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">969</span>         <span class="n">columns</span> <span class="o">=</span> <span class="n">_validate_or_indexify_columns</span><span class="p">(</span><span class="n">contents</span><span class="p">,</span> <span class="n">columns</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">970</span>     <span class="k">except</span> <span class="ne">AssertionError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/internals/construction.py</span> in <span class="ni">_validate_or_indexify_columns</span><span class="nt">(content, columns)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/core/internals/construction.py</span> in <span class="ni">_validate_or_indexify_columns</span><span class="nt">(content, columns)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1016</span>             <span class="c1"># caller&#39;s responsibility to check for this...</span>
 <span class="ne">-&gt; </span><span class="mi">1017</span>             <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span>
 <span class="g g-Whitespace">   </span><span class="mi">1018</span>                 <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">columns</span><span class="p">)</span><span class="si">}</span><span class="s2"> columns passed, passed data had &quot;</span>
@@ -511,28 +518,28 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-pack
 <span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="k">return</span> <span class="n">df</span>
 <span class="g g-Whitespace">     </span><span class="mi">42</span> 
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/frame.py</span> in <span class="ni">__init__</span><span class="nt">(self, data, index, columns, dtype, copy)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/core/frame.py</span> in <span class="ni">__init__</span><span class="nt">(self, data, index, columns, dtype, copy)</span>
 <span class="g g-Whitespace">    </span><span class="mi">744</span>                     <span class="k">if</span> <span class="n">columns</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">745</span>                         <span class="n">columns</span> <span class="o">=</span> <span class="n">ensure_index</span><span class="p">(</span><span class="n">columns</span><span class="p">)</span>
 <span class="ne">--&gt; </span><span class="mi">746</span>                     <span class="n">arrays</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="n">nested_data_to_arrays</span><span class="p">(</span>
 <span class="g g-Whitespace">    </span><span class="mi">747</span>                         <span class="c1"># error: Argument 3 to &quot;nested_data_to_arrays&quot; has incompatible</span>
 <span class="g g-Whitespace">    </span><span class="mi">748</span>                         <span class="c1"># type &quot;Optional[Collection[Any]]&quot;; expected &quot;Optional[Index]&quot;</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/internals/construction.py</span> in <span class="ni">nested_data_to_arrays</span><span class="nt">(data, columns, index, dtype)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/core/internals/construction.py</span> in <span class="ni">nested_data_to_arrays</span><span class="nt">(data, columns, index, dtype)</span>
 <span class="g g-Whitespace">    </span><span class="mi">508</span>         <span class="n">columns</span> <span class="o">=</span> <span class="n">ensure_index</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_fields</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">509</span> 
 <span class="ne">--&gt; </span><span class="mi">510</span>     <span class="n">arrays</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">to_arrays</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">511</span>     <span class="n">columns</span> <span class="o">=</span> <span class="n">ensure_index</span><span class="p">(</span><span class="n">columns</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">512</span> 
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/internals/construction.py</span> in <span class="ni">to_arrays</span><span class="nt">(data, columns, dtype)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/core/internals/construction.py</span> in <span class="ni">to_arrays</span><span class="nt">(data, columns, dtype)</span>
 <span class="g g-Whitespace">    </span><span class="mi">873</span>         <span class="n">arr</span> <span class="o">=</span> <span class="n">_list_to_arrays</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">874</span> 
 <span class="ne">--&gt; </span><span class="mi">875</span>     <span class="n">content</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">_finalize_columns_and_data</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="n">dtype</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">876</span>     <span class="k">return</span> <span class="n">content</span><span class="p">,</span> <span class="n">columns</span>
 <span class="g g-Whitespace">    </span><span class="mi">877</span> 
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/internals/construction.py</span> in <span class="ni">_finalize_columns_and_data</span><span class="nt">(content, columns, dtype)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/core/internals/construction.py</span> in <span class="ni">_finalize_columns_and_data</span><span class="nt">(content, columns, dtype)</span>
 <span class="g g-Whitespace">    </span><span class="mi">970</span>     <span class="k">except</span> <span class="ne">AssertionError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">971</span>         <span class="c1"># GH#26429 do not raise user-facing AssertionError</span>
 <span class="ne">--&gt; </span><span class="mi">972</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">err</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>

@@ -1,0 +1,3161 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas Crawling Komentar Youtube &#8212; Purnomo Ribut | PSD B</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugasmodeling';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Tugas PAGERANK" href="tugas6.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Pengenalan</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tugas</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tugas1.html"><strong>Tugas 1</strong> Crawling Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2.html"><strong>Tugas 2</strong> Mengambil Data dari semua Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UTS_PSD.html"><strong>Tugas Pra UTS</strong> (1 Prepocessing)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UTS2-PSD.html"><strong>Tugas Pra UTS</strong> (2 Modeling)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UTS.html"><strong>UTS</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas6.html"><strong>Tugas PAGERANK</strong></a></li>
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas Crawling Komentar Youtube</a></li>
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Purnomo-Ribut/prosaindata.git/blob/gh-pages/_sources/tugasmodeling.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Purnomo-Ribut/prosaindata.git" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Purnomo-Ribut/prosaindata.git/issues/new?title=Issue%20on%20page%20%2Ftugasmodeling.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/tugasmodeling.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tugas Crawling Komentar Youtube</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Tugas Crawling Komentar Youtube</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing"><strong>Preprocessing</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#word-normalization">Word Normalization</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#stopwords-removal"><strong>Stopwords Removal</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#stemming"><strong>Stemming</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pembobotan-kata"><strong>Pembobotan Kata</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#latent-semantic-indexing-using-scikit-learn"><strong>Latent Semantic Indexing using Scikit-Learn</strong></a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-1-d5df0069828e&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/drive.py</span> in <span class="ni">mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, readonly)</span>
+<span class="g g-Whitespace">    </span><span class="mi">101</span> <span class="k">def</span> <span class="nf">mount</span><span class="p">(</span><span class="n">mountpoint</span><span class="p">,</span> <span class="n">force_remount</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timeout_ms</span><span class="o">=</span><span class="mi">120000</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">102</span><span class="w">   </span><span class="sd">&quot;&quot;&quot;Mount your Google Drive at the specified mountpoint path.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">103</span>   <span class="k">return</span> <span class="n">_mount</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span>       <span class="n">mountpoint</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span>       <span class="n">force_remount</span><span class="o">=</span><span class="n">force_remount</span><span class="p">,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/drive.py</span> in <span class="ni">_mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, ephemeral, readonly)</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span>   <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">131</span>   <span class="k">if</span> <span class="n">ephemeral</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">132</span>     <span class="n">_message</span><span class="o">.</span><span class="n">blocking_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span>         <span class="s1">&#39;request_auth&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;authType&#39;</span><span class="p">:</span> <span class="s1">&#39;dfs_ephemeral&#39;</span><span class="p">},</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">134</span>     <span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/_message.py</span> in <span class="ni">blocking_request</span><span class="nt">(request_type, request, timeout_sec, parent)</span>
+<span class="g g-Whitespace">    </span><span class="mi">174</span>       <span class="n">request_type</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">expect_reply</span><span class="o">=</span><span class="kc">True</span>
+<span class="g g-Whitespace">    </span><span class="mi">175</span>   <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">176</span>   <span class="k">return</span> <span class="n">read_reply_from_input</span><span class="p">(</span><span class="n">request_id</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/_message.py</span> in <span class="ni">read_reply_from_input</span><span class="nt">(message_id, timeout_sec)</span>
+<span class="g g-Whitespace">     </span><span class="mi">94</span>     <span class="n">reply</span> <span class="o">=</span> <span class="n">_read_next_input_message</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="n">_NOT_READY</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">96</span>       <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">97</span>       <span class="k">continue</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span>     <span class="k">if</span> <span class="p">(</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>numpy
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pandas
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (1.22.4)
+Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: pandas in /usr/local/lib/python3.10/dist-packages (1.5.3)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in /usr/local/lib/python3.10/dist-packages (from pandas) (2.8.2)
+Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas) (2022.7.1)
+Requirement already satisfied: numpy&gt;=1.21.0 in /usr/local/lib/python3.10/dist-packages (from pandas) (1.22.4)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.8.1-&gt;pandas) (1.16.0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="tugas-crawling-komentar-youtube">
+<h1>Tugas Crawling Komentar Youtube<a class="headerlink" href="#tugas-crawling-komentar-youtube" title="Permalink to this heading">#</a></h1>
+<p>langkah yang dilakukan dalam mengaktivasi API Google</p>
+<ul class="simple">
+<li><p>Login ke Goggle Developer Console dengan akun Google
+Link :
+<a class="reference external" href="https://console.developers.google.com/">Google Developer Console </a></p></li>
+<li><p>Buat <strong>Project baru</strong> dan lengkapi isi yang diminta</p></li>
+<li><p>Setelah masuk pada laman projek yang dibuat, kemudian klik <strong>“ENABLE APIS AND SERVICES”</strong> dan pilih <strong>YouTube Data API v3</strong></p></li>
+<li><p>Kemudian klik **Try This API **</p></li>
+<li><p>Dari halaman dashboard, buat kredential agar API tersebut dapat digunakan.
+<a class="reference external" href="https://console.cloud.google.com/apis/credentials?hl=id&amp;project=youtube-crawling-386306"><strong>Buat Kredensial (Create Credential)</strong></a></p></li>
+</ul>
+<p><strong>Import Library</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">googleapiclient.discovery</span> <span class="kn">import</span> <span class="n">build</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#fungsi mengambil data komentar di youtube</span>
+<span class="k">def</span> <span class="nf">video_comments</span><span class="p">(</span><span class="n">video_id</span><span class="p">):</span>
+	<span class="c1"># empty list for storing reply</span>
+	<span class="n">replies</span> <span class="o">=</span> <span class="p">[]</span>
+
+	<span class="c1"># creating youtube resource object</span>
+	<span class="n">youtube</span> <span class="o">=</span> <span class="n">build</span><span class="p">(</span><span class="s1">&#39;youtube&#39;</span><span class="p">,</span> <span class="s1">&#39;v3&#39;</span><span class="p">,</span> <span class="n">developerKey</span><span class="o">=</span><span class="n">api_key</span><span class="p">)</span>
+
+	<span class="c1"># retrieve youtube video results</span>
+	<span class="n">video_response</span> <span class="o">=</span> <span class="n">youtube</span><span class="o">.</span><span class="n">commentThreads</span><span class="p">()</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">part</span><span class="o">=</span><span class="s1">&#39;snippet,replies&#39;</span><span class="p">,</span> <span class="n">videoId</span><span class="o">=</span><span class="n">video_id</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+
+	<span class="c1"># iterate video response</span>
+	<span class="k">while</span> <span class="n">video_response</span><span class="p">:</span>
+		
+		<span class="c1"># extracting required info</span>
+		<span class="c1"># from each result object</span>
+		<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">video_response</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">]:</span>
+			
+			<span class="c1"># Extracting comments ()</span>
+			<span class="n">published</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;topLevelComment&#39;</span><span class="p">][</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;publishedAt&#39;</span><span class="p">]</span>
+			<span class="n">user</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;topLevelComment&#39;</span><span class="p">][</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;authorDisplayName&#39;</span><span class="p">]</span>
+
+			<span class="c1"># Extracting comments</span>
+			<span class="n">comment</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;topLevelComment&#39;</span><span class="p">][</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;textDisplay&#39;</span><span class="p">]</span>
+			<span class="n">likeCount</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;topLevelComment&#39;</span><span class="p">][</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;likeCount&#39;</span><span class="p">]</span>
+
+			<span class="n">replies</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">published</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">comment</span><span class="p">,</span> <span class="n">likeCount</span><span class="p">])</span>
+			
+			<span class="c1"># counting number of reply of comment</span>
+			<span class="n">replycount</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;totalReplyCount&#39;</span><span class="p">]</span>
+
+			<span class="c1"># if reply is there</span>
+			<span class="k">if</span> <span class="n">replycount</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+				<span class="c1"># iterate through all reply</span>
+				<span class="k">for</span> <span class="n">reply</span> <span class="ow">in</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;replies&#39;</span><span class="p">][</span><span class="s1">&#39;comments&#39;</span><span class="p">]:</span>
+					
+					<span class="c1"># Extract reply</span>
+					<span class="n">published</span> <span class="o">=</span> <span class="n">reply</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;publishedAt&#39;</span><span class="p">]</span>
+					<span class="n">user</span> <span class="o">=</span> <span class="n">reply</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;authorDisplayName&#39;</span><span class="p">]</span>
+					<span class="n">repl</span> <span class="o">=</span> <span class="n">reply</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;textDisplay&#39;</span><span class="p">]</span>
+					<span class="n">likeCount</span> <span class="o">=</span> <span class="n">reply</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;likeCount&#39;</span><span class="p">]</span>
+					
+					<span class="c1"># Store reply is list</span>
+					<span class="c1">#replies.append(reply)</span>
+					<span class="n">replies</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">published</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">repl</span><span class="p">,</span> <span class="n">likeCount</span><span class="p">])</span>
+
+			<span class="c1"># print comment with list of reply</span>
+			<span class="c1">#print(comment, replies, end = &#39;\n\n&#39;)</span>
+
+			<span class="c1"># empty reply list</span>
+			<span class="c1">#replies = []</span>
+
+		<span class="c1"># Again repeat</span>
+		<span class="k">if</span> <span class="s1">&#39;nextPageToken&#39;</span> <span class="ow">in</span> <span class="n">video_response</span><span class="p">:</span>
+			<span class="n">video_response</span> <span class="o">=</span> <span class="n">youtube</span><span class="o">.</span><span class="n">commentThreads</span><span class="p">()</span><span class="o">.</span><span class="n">list</span><span class="p">(</span>
+					<span class="n">part</span> <span class="o">=</span> <span class="s1">&#39;snippet,replies&#39;</span><span class="p">,</span>
+					<span class="n">pageToken</span> <span class="o">=</span> <span class="n">video_response</span><span class="p">[</span><span class="s1">&#39;nextPageToken&#39;</span><span class="p">],</span> 
+					<span class="n">videoId</span> <span class="o">=</span> <span class="n">video_id</span>
+				<span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+		<span class="k">else</span><span class="p">:</span>
+			<span class="k">break</span>
+	<span class="c1">#endwhile</span>
+	<span class="k">return</span> <span class="n">replies</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Menjalankan proses crawling</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># isikan dengan api key Anda</span>
+<span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;AIzaSyBoRn9wIjryOsz7RDnl7Rcul4hnQKWfEaU&#39;</span>
+
+<span class="c1"># Enter video id</span>
+<span class="c1"># contoh url video = https://www.youtube.com/watch?v=xiyAOKCAOyY</span>
+<span class="n">video_id</span> <span class="o">=</span> <span class="s2">&quot;xiyAOKCAOyY&quot;</span> <span class="c1">#isikan dengan kode / ID video</span>
+
+<span class="c1"># Call function</span>
+<span class="n">comments</span> <span class="o">=</span> <span class="n">video_comments</span><span class="p">(</span><span class="n">video_id</span><span class="p">)</span>
+
+<span class="n">comments</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&#39;2023-05-09T13:38:47Z&#39;,
+  &#39;Heru Bambang&#39;,
+  &#39;Benar klo kali ini pilih Prabowo. Yg 1 ini ikhlas n lapang dada n berpandangan luas !&#39;,
+  0],
+ [&#39;2023-05-08T01:40:08Z&#39;,
+  &#39;Mawar Merah&#39;,
+  &#39;Sak karepmu kono pak WOWO....☝️☝️&lt;br&gt;Aku bersama kelg besarku di JAKARTA &amp;amp; di BEKASI akan tetap dukung &amp;amp; pilih pak GANJAR PRANOWO....👍👍&lt;br&gt;Pak GANJAR akan siap....👍👍 Bekerja &amp;amp; berjuang untuk kesejahteraan RAKYAT INDONESIA 🇮🇩🇮🇩bukan untuk kesejahteraan para BOHIR2 &amp;amp; kelg CENDANA yg skrg sdh pd merepat &amp;amp; mendekat ke PRABOWO....!! ☝️☝️☝️&lt;br&gt;MERDEKA....💪💪🇮🇩🇮🇩&lt;br&gt;Pak GANJAR sll dihati ❤❤ dan sll dinanti di 2024 👍👍&#39;,
+  1],
+ [&#39;2023-05-07T13:01:16Z&#39;,
+  &#39;Jam Gadang&#39;,
+  &#39;Tak bisa di percaya lagi...bermuka dua...haus jabatan..dah luntur kepercayaan rakyat...rakyat terpecah. eh...Manunggaling ke jokowi...wo wo ampun deh.&#39;,
+  0],
+ [&#39;2023-05-06T10:14:00Z&#39;,
+  &#39;Fitri Fitri&#39;,
+  &#39;Mantaaap pak prabowo  ,presiden ke 8,amiin.&#39;,
+  0],
+ [&#39;2023-05-05T15:51:38Z&#39;,
+  &#39;Arjuna Putra pandu&#39;,
+  &#39;Nggak tau malu si Wowo. .&#39;,
+  0],
+ [&#39;2023-05-08T01:45:19Z&#39;,
+  &#39;Mawar Merah&#39;,
+  &#39;Biarkan sj nt klo kalah lagi kan bisa dpt LEBEL Capres ABADI tho....??&lt;br&gt;☝️☝️☝️😂😂😂&#39;,
+  1],
+ [&#39;2023-05-03T19:07:45Z&#39;, &#39;Fahmyksa&#39;, &#39;piring cantik&#39;, 0],
+ [&#39;2023-05-03T16:36:40Z&#39;,
+  &#39;sapu jagad&#39;,
+  &#39;Kalau tidak jadi mantri kmaren saya salud tapi skarang gak la suara kmai buat pak Anis aja&#39;,
+  1],
+ [&#39;2023-05-03T16:20:07Z&#39;, &#39;Afif Udin&#39;, &#39;prabowo yes&#39;, 0],
+ [&#39;2023-05-03T15:57:46Z&#39;,
+  &#39;TAMI&#39;,
+  &#39;PAK PRABOWO 4THN ini sdh di samping Pak jokowi  pasti beliaulah yg mengerti kemauan PAK JOKOWI ❤&lt;br&gt;MAJU PAK&#39;,
+  0],
+ [&#39;2023-05-03T15:41:48Z&#39;, &#39;Mir Za&#39;, &#39;Udh mulai kejang2 lagi pak ya...?&#39;, 1],
+ [&#39;2023-05-03T15:32:30Z&#39;,
+  &#39;Ummie Dhalfa&#39;,
+  &#39;2019 saya pilih pak Prabowo,2024 saya pilih pak Anies.&#39;,
+  2],
+ [&#39;2023-05-06T06:25:36Z&#39;,
+  &#39;Sahwan Firansyah&#39;,
+  &#39;2014 2019 2004 saya pilih dia kasian kalo kalah&#39;,
+  0],
+ [&#39;2023-05-03T15:25:00Z&#39;,
+  &#39;Yurnita bahar&#39;,
+  &#39;Wek Wek semangat pak ganjarrrrrr&#39;,
+  0],
+ [&#39;2023-05-03T15:23:43Z&#39;,
+  &#39;faisal abdillah&#39;,
+  &#39;Jngn mau kalo jadi cawapress&#39;,
+  0],
+ [&#39;2023-05-03T14:46:36Z&#39;,
+  &#39;Iqbal Raya Pratama&#39;,
+  &#39;Ridwan Kamil yakin menang&#39;,
+  0],
+ [&#39;2023-05-03T14:43:48Z&#39;,
+  &#39;I Am GoVlog&#39;,
+  &#39;Agak mudaan dikit lah.. kalo ketuaan ntar malah kek om biden, pidato dikit malah linglung&#39;,
+  1],
+ [&#39;2023-05-08T01:47:43Z&#39;,
+  &#39;Mawar Merah&#39;,
+  &#39;Biarkan sj mas karena AMBISI nya sdh smp ke ubun2 untuk pengen jadi PLECIDEN....!! &lt;br&gt;☝️☝️☝️😂😂😂&lt;br&gt;Nanti klo kalah lagi kan bisa dpt lebel 3X CAPRES ABADI&lt;br&gt;☝️☝️☝️🙈🙈🙈🤣🤣🤣&#39;,
+  1],
+ [&#39;2023-05-03T14:41:27Z&#39;,
+  &#39;Samui Japan&#39;,
+  &#39;Tetap berjuang dan istiqomah bersama rakyat pak prabowo...saya pribadi akan tetap mendukung beliau pak walau di negeri orang..pak prabowo for 2024&#39;,
+  0],
+ [&#39;2023-05-03T14:33:06Z&#39;, &#39;Abdul Komus&#39;, &#39;Ps 08 ..2024 bisa yoo&#39;, 0],
+ [&#39;2023-05-03T14:28:29Z&#39;,
+  &#39;Jeanne Vero  channel&#39;,
+  &#39;Sak karepmu angel angel angel angel tenan tuturanmu 😂😂😂 Pak sing penting Pak Ganjar Pranowo pilihan ku 😂😂😂&#39;,
+  1],
+ [&#39;2023-05-08T06:07:23Z&#39;,
+  &#39;Jeanne Vero  channel&#39;,
+  &#39;@Mawar Merah pleciden plecidenan 🤣🤣🤣&#39;,
+  0],
+ [&#39;2023-05-08T01:52:05Z&#39;,
+  &#39;Mawar Merah&#39;,
+  &#39;Pancen yo koyo ngono.kuwi wes ANGEL....!! &lt;br&gt;Ora nyawang umur &amp;amp; kekuatan awak wes loyo mlaku wae wes arep tibo....&lt;br&gt;Kok isih ngoyo wae....pengen dadi PLECIDEN....&lt;br&gt;Mengko yen kalah yo dadi Capres ABADI.....&lt;br&gt;☝️☝️☝️🙈🙈🙈🤣🤣🤣&#39;,
+  1],
+ [&#39;2023-05-03T14:27:43Z&#39;, &#39;KUCING NGAPAK&#39;, &#39;Prabowo yes&#39;, 0],
+ [&#39;2023-05-03T14:25:35Z&#39;,
+  &#39;Tody setiawan&#39;,
+  &#39;Maju terus sekalipun lawanmu jan ethes&#39;,
+  2],
+ [&#39;2023-05-03T14:23:02Z&#39;, &#39;Anh Kiia&#39;, &#39;wkwkwk&#39;, 0],
+ [&#39;2023-05-03T14:19:10Z&#39;, &#39;Hardian Idris&#39;, &#39;Ganjr lah❤❤❤❤&#39;, 2],
+ [&#39;2023-05-03T14:17:26Z&#39;,
+  &#39;Sigit p p&#39;,
+  &#39;Maju terserah tidak terserah tetap pilihan kami di 2004 capres yg ada istri nya 🤣&#39;,
+  0],
+ [&#39;2023-05-03T14:17:10Z&#39;, &#39;Sigit Firmansyah&#39;, &#39;Maju prabowo&#39;, 1],
+ [&#39;2023-05-03T14:15:05Z&#39;,
+  &#39;Lina istianti&#39;,
+  &#39;Nyapres trs brow,,, kita ttap bersatu padu untuk menumbang kan mu,,smg negara RI jangan sampai di pimpin prabowo Anies baswedan,,,Aamiin,,!&#39;,
+  3],
+ [&#39;2023-05-10T00:54:47Z&#39;,
+  &#39;Sahwan Firansyah&#39;,
+  &#39;@Mawar Merah aku yakin kali ini dia menang karna raykat kasian sama dia&#39;,
+  0],
+ [&#39;2023-05-08T01:55:46Z&#39;,
+  &#39;Mawar Merah&#39;,
+  &#39;\u200b\u200b@Sahwan Firansyah Awas ya...!!&lt;br&gt;Nanti.kalo kalih lagi jgn nangis ya....&lt;br&gt;😭😭😭🤣🤣🤣&lt;br&gt;Nanti akan dapat hadiah dr RAKYAT INDONESIA....🇮🇩🇮🇩&lt;br&gt;LABEL Capres ABADI 3X.....&lt;br&gt;☝️☝️☝️😃😃😃👍👍👍&#39;,
+  1],
+ [&#39;2023-05-06T06:24:30Z&#39;,
+  &#39;Sahwan Firansyah&#39;,
+  &#39;prabowo pasti bakalan menang&#39;,
+  1],
+ [&#39;2023-05-03T14:11:44Z&#39;,
+  &#39;Rahmat Hidayat&#39;,
+  &#39;aku enggak lah,cukup tiga X ndukung beliau 2024 ganti yg muda.&#39;,
+  0]]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Hasil Crawling</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">comments</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Tanggal&#39;</span><span class="p">,</span> <span class="s1">&#39;Nama&#39;</span><span class="p">,</span> <span class="s1">&#39;Komentar&#39;</span><span class="p">,</span> <span class="s1">&#39;likeCount&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-e7f7b4d3-091d-400b-b453-02fecc98cadc">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Tanggal</th>
+      <th>Nama</th>
+      <th>Komentar</th>
+      <th>likeCount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2023-05-09T13:38:47Z</td>
+      <td>Heru Bambang</td>
+      <td>Benar klo kali ini pilih Prabowo. Yg 1 ini ikh...</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2023-05-08T01:40:08Z</td>
+      <td>Mawar Merah</td>
+      <td>Sak karepmu kono pak WOWO....☝️☝️&lt;br&gt;Aku bersa...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2023-05-07T13:01:16Z</td>
+      <td>Jam Gadang</td>
+      <td>Tak bisa di percaya lagi...bermuka dua...haus ...</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2023-05-06T10:14:00Z</td>
+      <td>Fitri Fitri</td>
+      <td>Mantaaap pak prabowo  ,presiden ke 8,amiin.</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2023-05-05T15:51:38Z</td>
+      <td>Arjuna Putra pandu</td>
+      <td>Nggak tau malu si Wowo. .</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2023-05-08T01:45:19Z</td>
+      <td>Mawar Merah</td>
+      <td>Biarkan sj nt klo kalah lagi kan bisa dpt LEBE...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2023-05-03T19:07:45Z</td>
+      <td>Fahmyksa</td>
+      <td>piring cantik</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2023-05-03T16:36:40Z</td>
+      <td>sapu jagad</td>
+      <td>Kalau tidak jadi mantri kmaren saya salud tapi...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2023-05-03T16:20:07Z</td>
+      <td>Afif Udin</td>
+      <td>prabowo yes</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2023-05-03T15:57:46Z</td>
+      <td>TAMI</td>
+      <td>PAK PRABOWO 4THN ini sdh di samping Pak jokowi...</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>2023-05-03T15:41:48Z</td>
+      <td>Mir Za</td>
+      <td>Udh mulai kejang2 lagi pak ya...?</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>2023-05-03T15:32:30Z</td>
+      <td>Ummie Dhalfa</td>
+      <td>2019 saya pilih pak Prabowo,2024 saya pilih pa...</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>2023-05-06T06:25:36Z</td>
+      <td>Sahwan Firansyah</td>
+      <td>2014 2019 2004 saya pilih dia kasian kalo kalah</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>2023-05-03T15:25:00Z</td>
+      <td>Yurnita bahar</td>
+      <td>Wek Wek semangat pak ganjarrrrrr</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>2023-05-03T15:23:43Z</td>
+      <td>faisal abdillah</td>
+      <td>Jngn mau kalo jadi cawapress</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>2023-05-03T14:46:36Z</td>
+      <td>Iqbal Raya Pratama</td>
+      <td>Ridwan Kamil yakin menang</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>2023-05-03T14:43:48Z</td>
+      <td>I Am GoVlog</td>
+      <td>Agak mudaan dikit lah.. kalo ketuaan ntar mala...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>2023-05-08T01:47:43Z</td>
+      <td>Mawar Merah</td>
+      <td>Biarkan sj mas karena AMBISI nya sdh smp ke ub...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>2023-05-03T14:41:27Z</td>
+      <td>Samui Japan</td>
+      <td>Tetap berjuang dan istiqomah bersama rakyat pa...</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>2023-05-03T14:33:06Z</td>
+      <td>Abdul Komus</td>
+      <td>Ps 08 ..2024 bisa yoo</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>2023-05-03T14:28:29Z</td>
+      <td>Jeanne Vero  channel</td>
+      <td>Sak karepmu angel angel angel angel tenan tutu...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>2023-05-08T06:07:23Z</td>
+      <td>Jeanne Vero  channel</td>
+      <td>@Mawar Merah pleciden plecidenan 🤣🤣🤣</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>2023-05-08T01:52:05Z</td>
+      <td>Mawar Merah</td>
+      <td>Pancen yo koyo ngono.kuwi wes ANGEL....!! &lt;br&gt;...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>2023-05-03T14:27:43Z</td>
+      <td>KUCING NGAPAK</td>
+      <td>Prabowo yes</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>2023-05-03T14:25:35Z</td>
+      <td>Tody setiawan</td>
+      <td>Maju terus sekalipun lawanmu jan ethes</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>2023-05-03T14:23:02Z</td>
+      <td>Anh Kiia</td>
+      <td>wkwkwk</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>2023-05-03T14:19:10Z</td>
+      <td>Hardian Idris</td>
+      <td>Ganjr lah❤❤❤❤</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>2023-05-03T14:17:26Z</td>
+      <td>Sigit p p</td>
+      <td>Maju terserah tidak terserah tetap pilihan kam...</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>2023-05-03T14:17:10Z</td>
+      <td>Sigit Firmansyah</td>
+      <td>Maju prabowo</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>2023-05-03T14:15:05Z</td>
+      <td>Lina istianti</td>
+      <td>Nyapres trs brow,,, kita ttap bersatu padu unt...</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>2023-05-10T00:54:47Z</td>
+      <td>Sahwan Firansyah</td>
+      <td>@Mawar Merah aku yakin kali ini dia menang kar...</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>2023-05-08T01:55:46Z</td>
+      <td>Mawar Merah</td>
+      <td>​​@Sahwan Firansyah Awas ya...!!&lt;br&gt;Nanti.kalo...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>2023-05-06T06:24:30Z</td>
+      <td>Sahwan Firansyah</td>
+      <td>prabowo pasti bakalan menang</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>2023-05-03T14:11:44Z</td>
+      <td>Rahmat Hidayat</td>
+      <td>aku enggak lah,cukup tiga X ndukung beliau 202...</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e7f7b4d3-091d-400b-b453-02fecc98cadc')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-e7f7b4d3-091d-400b-b453-02fecc98cadc button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-e7f7b4d3-091d-400b-b453-02fecc98cadc');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+<p><strong>Hasil Crawling</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;komentar youtube.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="preprocessing">
+<h1><strong>Preprocessing</strong><a class="headerlink" href="#preprocessing" title="Permalink to this heading">#</a></h1>
+<p>Text Cleaning</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#install library</span>
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>sastrawi
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>swifter
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>gensim
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Collecting sastrawi
+  Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">209.7/209.7 kB</span> <span class=" -Color -Color-Red">8.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hInstalling collected packages: sastrawi
+Successfully installed sastrawi-1.0.1
+Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Collecting swifter
+  Downloading swifter-1.3.4.tar.gz (830 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">830.9/830.9 kB</span> <span class=" -Color -Color-Red">17.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h  Preparing metadata (setup.py) ... ?25l?25hdone
+Requirement already satisfied: pandas&gt;=1.0.0 in /usr/local/lib/python3.10/dist-packages (from swifter) (1.5.3)
+Requirement already satisfied: psutil&gt;=5.6.6 in /usr/local/lib/python3.10/dist-packages (from swifter) (5.9.5)
+Requirement already satisfied: dask[dataframe]&gt;=2.10.0 in /usr/local/lib/python3.10/dist-packages (from swifter) (2022.12.1)
+Requirement already satisfied: tqdm&gt;=4.33.0 in /usr/local/lib/python3.10/dist-packages (from swifter) (4.65.0)
+Requirement already satisfied: ipywidgets&gt;=7.0.0 in /usr/local/lib/python3.10/dist-packages (from swifter) (7.7.1)
+Requirement already satisfied: cloudpickle&gt;=0.2.2 in /usr/local/lib/python3.10/dist-packages (from swifter) (2.2.1)
+Requirement already satisfied: parso&gt;0.4.0 in /usr/local/lib/python3.10/dist-packages (from swifter) (0.8.3)
+Requirement already satisfied: bleach&gt;=3.1.1 in /usr/local/lib/python3.10/dist-packages (from swifter) (6.0.0)
+Requirement already satisfied: six&gt;=1.9.0 in /usr/local/lib/python3.10/dist-packages (from bleach&gt;=3.1.1-&gt;swifter) (1.16.0)
+Requirement already satisfied: webencodings in /usr/local/lib/python3.10/dist-packages (from bleach&gt;=3.1.1-&gt;swifter) (0.5.1)
+Requirement already satisfied: click&gt;=7.0 in /usr/local/lib/python3.10/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (8.1.3)
+Requirement already satisfied: fsspec&gt;=0.6.0 in /usr/local/lib/python3.10/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (2023.4.0)
+Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.10/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (23.1)
+Requirement already satisfied: partd&gt;=0.3.10 in /usr/local/lib/python3.10/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.4.0)
+Requirement already satisfied: pyyaml&gt;=5.3.1 in /usr/local/lib/python3.10/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (6.0)
+Requirement already satisfied: toolz&gt;=0.8.2 in /usr/local/lib/python3.10/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (0.12.0)
+Requirement already satisfied: numpy&gt;=1.18 in /usr/local/lib/python3.10/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.22.4)
+Requirement already satisfied: ipykernel&gt;=4.5.1 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (5.5.6)
+Requirement already satisfied: ipython-genutils~=0.2.0 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.0)
+Requirement already satisfied: traitlets&gt;=4.3.1 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (5.7.1)
+Requirement already satisfied: widgetsnbextension~=3.6.0 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (3.6.4)
+Requirement already satisfied: ipython&gt;=4.0.0 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (7.34.0)
+Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (3.0.7)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in /usr/local/lib/python3.10/dist-packages (from pandas&gt;=1.0.0-&gt;swifter) (2.8.2)
+Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas&gt;=1.0.0-&gt;swifter) (2022.7.1)
+Requirement already satisfied: jupyter-client in /usr/local/lib/python3.10/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.1.12)
+Requirement already satisfied: tornado&gt;=4.2 in /usr/local/lib/python3.10/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.2)
+Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (67.7.2)
+Collecting jedi&gt;=0.16 (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter)
+  Downloading jedi-0.18.2-py2.py3-none-any.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.6/1.6 MB</span> <span class=" -Color -Color-Red">64.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: decorator in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.4.2)
+Requirement already satisfied: pickleshare in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.5)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.0.38)
+Requirement already satisfied: pygments in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.14.0)
+Requirement already satisfied: backcall in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.0)
+Requirement already satisfied: matplotlib-inline in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.1.6)
+Requirement already satisfied: pexpect&gt;4.3 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.8.0)
+Requirement already satisfied: locket in /usr/local/lib/python3.10/dist-packages (from partd&gt;=0.3.10-&gt;dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.0.0)
+Requirement already satisfied: notebook&gt;=4.4.1 in /usr/local/lib/python3.10/dist-packages (from widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.4.8)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.1.2)
+Requirement already satisfied: pyzmq&gt;=17 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (23.2.1)
+Requirement already satisfied: argon2-cffi in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (21.3.0)
+Requirement already satisfied: jupyter-core&gt;=4.6.1 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.3.0)
+Requirement already satisfied: nbformat in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.8.0)
+Requirement already satisfied: nbconvert in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.5.4)
+Requirement already satisfied: nest-asyncio&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.5.6)
+Requirement already satisfied: Send2Trash&gt;=1.8.0 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.8.0)
+Requirement already satisfied: terminado&gt;=0.8.3 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.17.1)
+Requirement already satisfied: prometheus-client in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.16.0)
+Requirement already satisfied: ptyprocess&gt;=0.5 in /usr/local/lib/python3.10/dist-packages (from pexpect&gt;4.3-&gt;ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.0)
+Requirement already satisfied: wcwidth in /usr/local/lib/python3.10/dist-packages (from prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0-&gt;ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.6)
+Requirement already satisfied: platformdirs&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from jupyter-core&gt;=4.6.1-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.3.0)
+Requirement already satisfied: argon2-cffi-bindings in /usr/local/lib/python3.10/dist-packages (from argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (21.2.0)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/local/lib/python3.10/dist-packages (from jinja2-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.1.2)
+Requirement already satisfied: lxml in /usr/local/lib/python3.10/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.9.2)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.11.2)
+Requirement already satisfied: defusedxml in /usr/local/lib/python3.10/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.1)
+Requirement already satisfied: entrypoints&gt;=0.2.2 in /usr/local/lib/python3.10/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.4)
+Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.10/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.2)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.10/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.8.4)
+Requirement already satisfied: nbclient&gt;=0.5.0 in /usr/local/lib/python3.10/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.4)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.10/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.5.0)
+Requirement already satisfied: tinycss2 in /usr/local/lib/python3.10/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.2.1)
+Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.10/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.16.3)
+Requirement already satisfied: jsonschema&gt;=2.6 in /usr/local/lib/python3.10/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.3.3)
+Requirement already satisfied: attrs&gt;=17.4.0 in /usr/local/lib/python3.10/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (23.1.0)
+Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,&gt;=0.14.0 in /usr/local/lib/python3.10/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.19.3)
+Requirement already satisfied: cffi&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.15.1)
+Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4-&gt;nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.4.1)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.10/dist-packages (from cffi&gt;=1.0.1-&gt;argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.21)
+Building wheels for collected packages: swifter
+  Building wheel for swifter (setup.py) ... ?25l?25hdone
+  Created wheel for swifter: filename=swifter-1.3.4-py3-none-any.whl size=16299 sha256=fec7e33a822901531adfad14b58e32aecad3ce5c7426a19aeb89d5eb03e7f4b7
+  Stored in directory: /root/.cache/pip/wheels/6c/bd/3e/2d6afc9bc36c9975f8e4215a270bbac6580c4361ebd6bb2323
+Successfully built swifter
+Installing collected packages: jedi, swifter
+Successfully installed jedi-0.18.2 swifter-1.3.4
+Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: gensim in /usr/local/lib/python3.10/dist-packages (4.3.1)
+Requirement already satisfied: numpy&gt;=1.18.5 in /usr/local/lib/python3.10/dist-packages (from gensim) (1.22.4)
+Requirement already satisfied: scipy&gt;=1.7.0 in /usr/local/lib/python3.10/dist-packages (from gensim) (1.10.1)
+Requirement already satisfied: smart-open&gt;=1.8.1 in /usr/local/lib/python3.10/dist-packages (from gensim) (6.3.0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import library</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">string</span> <span class="kn">import</span> <span class="n">punctuation</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#proses menghilangkan simbol dan emoji</span>
+<span class="k">def</span> <span class="nf">remove_text_special</span> <span class="p">(</span><span class="n">text</span><span class="p">):</span>
+  <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">t&#39;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">n&#39;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">u&#39;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+  <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="s1">&#39;replace&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;http://&quot;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;https://&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Komentar&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Komentar&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_text_special</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Komentar&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     Benar klo kali ini pilih Prabowo. Yg 1 ini ikh...
+1     Sak karepmu kono pak WOWO....????&lt;br&gt;Aku bersa...
+2     Tak bisa di percaya lagi...bermuka dua...haus ...
+3           Mantaaap pak prabowo  ,presiden ke 8,amiin.
+4                             Nggak tau malu si Wowo. .
+5     Biarkan sj nt klo kalah lagi kan bisa dpt LEBE...
+6                                         piring cantik
+7     Kalau tidak jadi mantri kmaren saya salud tapi...
+8                                           prabowo yes
+9     PAK PRABOWO 4THN ini sdh di samping Pak jokowi...
+10                    Udh mulai kejang2 lagi pak ya...?
+11    2019 saya pilih pak Prabowo,2024 saya pilih pa...
+12      2014 2019 2004 saya pilih dia kasian kalo kalah
+13                     Wek Wek semangat pak ganjarrrrrr
+14                         Jngn mau kalo jadi cawapress
+15                            Ridwan Kamil yakin menang
+16    Agak mudaan dikit lah.. kalo ketuaan ntar mala...
+17    Biarkan sj mas karena AMBISI nya sdh smp ke ub...
+18    Tetap berjuang dan istiqomah bersama rakyat pa...
+19                                Ps 08 ..2024 bisa yoo
+20    Sak karepmu angel angel angel angel tenan tutu...
+21                 @Mawar Merah pleciden plecidenan ???
+22    Pancen yo koyo ngono.kuwi wes ANGEL....!! &lt;br&gt;...
+23                                          Prabowo yes
+24               Maju terus sekalipun lawanmu jan ethes
+25                                               wkwkwk
+26                                        Ganjr lah????
+27    Maju terserah tidak terserah tetap pilihan kam...
+28                                         Maju prabowo
+29    Nyapres trs brow,,, kita ttap bersatu padu unt...
+30    @Mawar Merah aku yakin kali ini dia menang kar...
+31    ??@Sahwan Firansyah Awas ya...!!&lt;br&gt;Nanti.kalo...
+32                         prabowo pasti bakalan menang
+33    aku enggak lah,cukup tiga X ndukung beliau 202...
+Name: Komentar, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#menghilangkan tanda baca</span>
+<span class="k">def</span> <span class="nf">remove_tanda_baca</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+  <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;(@[A-Za-z0-9]+)|([^0-9A-Za-z </span><span class="se">\t</span><span class="s2">])|(\w+:\/\/\S+)&quot;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">text</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Komentar&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Komentar&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_tanda_baca</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Komentar&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     Benar klo kali ini pilih Prabowo  Yg 1 ini ikh...
+1     Sak karepmu kono pak WOWO         br Aku bersa...
+2     Tak bisa di percaya lagi   bermuka dua   haus ...
+3           Mantaaap pak prabowo   presiden ke 8 amiin 
+4                             Nggak tau malu si Wowo   
+5     Biarkan sj nt klo kalah lagi kan bisa dpt LEBE...
+6                                         piring cantik
+7     Kalau tidak jadi mantri kmaren saya salud tapi...
+8                                           prabowo yes
+9     PAK PRABOWO 4THN ini sdh di samping Pak jokowi...
+10                    Udh mulai kejang2 lagi pak ya    
+11    2019 saya pilih pak Prabowo 2024 saya pilih pa...
+12      2014 2019 2004 saya pilih dia kasian kalo kalah
+13                     Wek Wek semangat pak ganjarrrrrr
+14                         Jngn mau kalo jadi cawapress
+15                            Ridwan Kamil yakin menang
+16    Agak mudaan dikit lah   kalo ketuaan ntar mala...
+17    Biarkan sj mas karena AMBISI nya sdh smp ke ub...
+18    Tetap berjuang dan istiqomah bersama rakyat pa...
+19                                Ps 08   2024 bisa yoo
+Name: Komentar, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#proses menghilangkan angka</span>
+<span class="k">def</span> <span class="nf">remove_numbers</span> <span class="p">(</span><span class="n">text</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d+&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Komentar&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Komentar&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_numbers</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Komentar&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     Benar klo kali ini pilih Prabowo  Yg  ini ikhl...
+1     Sak karepmu kono pak WOWO         br Aku bersa...
+2     Tak bisa di percaya lagi   bermuka dua   haus ...
+3            Mantaaap pak prabowo   presiden ke  amiin 
+4                             Nggak tau malu si Wowo   
+5     Biarkan sj nt klo kalah lagi kan bisa dpt LEBE...
+6                                         piring cantik
+7     Kalau tidak jadi mantri kmaren saya salud tapi...
+8                                           prabowo yes
+9     PAK PRABOWO THN ini sdh di samping Pak jokowi ...
+10                     Udh mulai kejang lagi pak ya    
+11        saya pilih pak Prabowo  saya pilih pak Anies 
+12                     saya pilih dia kasian kalo kalah
+13                     Wek Wek semangat pak ganjarrrrrr
+14                         Jngn mau kalo jadi cawapress
+15                            Ridwan Kamil yakin menang
+16    Agak mudaan dikit lah   kalo ketuaan ntar mala...
+17    Biarkan sj mas karena AMBISI nya sdh smp ke ub...
+18    Tetap berjuang dan istiqomah bersama rakyat pa...
+19                                      Ps     bisa yoo
+20    Sak karepmu angel angel angel angel tenan tutu...
+21                        Merah pleciden plecidenan    
+22    Pancen yo koyo ngono kuwi wes ANGEL        br ...
+23                                          Prabowo yes
+24               Maju terus sekalipun lawanmu jan ethes
+25                                               wkwkwk
+26                                        Ganjr lah    
+27    Maju terserah tidak terserah tetap pilihan kam...
+28                                         Maju prabowo
+29    Nyapres trs brow    kita ttap bersatu padu unt...
+30      Merah aku yakin kali ini dia menang karna ra...
+31        Firansyah Awas ya      br Nanti kalo kalih...
+32                         prabowo pasti bakalan menang
+33    aku enggak lah cukup tiga X ndukung beliau  ga...
+Name: Komentar, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#proses casefolding</span>
+<span class="k">def</span> <span class="nf">casefolding</span><span class="p">(</span><span class="n">Comment</span><span class="p">):</span>
+  <span class="n">Comment</span> <span class="o">=</span> <span class="n">Comment</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+  <span class="k">return</span> <span class="n">Comment</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Komentar&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Komentar&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">casefolding</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Komentar&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     benar klo kali ini pilih prabowo  yg  ini ikhl...
+1     sak karepmu kono pak wowo         br aku bersa...
+2     tak bisa di percaya lagi   bermuka dua   haus ...
+3            mantaaap pak prabowo   presiden ke  amiin 
+4                             nggak tau malu si wowo   
+5     biarkan sj nt klo kalah lagi kan bisa dpt lebe...
+6                                         piring cantik
+7     kalau tidak jadi mantri kmaren saya salud tapi...
+8                                           prabowo yes
+9     pak prabowo thn ini sdh di samping pak jokowi ...
+10                     udh mulai kejang lagi pak ya    
+11        saya pilih pak prabowo  saya pilih pak anies 
+12                     saya pilih dia kasian kalo kalah
+13                     wek wek semangat pak ganjarrrrrr
+14                         jngn mau kalo jadi cawapress
+15                            ridwan kamil yakin menang
+16    agak mudaan dikit lah   kalo ketuaan ntar mala...
+17    biarkan sj mas karena ambisi nya sdh smp ke ub...
+18    tetap berjuang dan istiqomah bersama rakyat pa...
+19                                      ps     bisa yoo
+20    sak karepmu angel angel angel angel tenan tutu...
+21                        merah pleciden plecidenan    
+22    pancen yo koyo ngono kuwi wes angel        br ...
+23                                          prabowo yes
+24               maju terus sekalipun lawanmu jan ethes
+25                                               wkwkwk
+26                                        ganjr lah    
+27    maju terserah tidak terserah tetap pilihan kam...
+28                                         maju prabowo
+29    nyapres trs brow    kita ttap bersatu padu unt...
+30      merah aku yakin kali ini dia menang karna ra...
+31        firansyah awas ya      br nanti kalo kalih...
+32                         prabowo pasti bakalan menang
+33    aku enggak lah cukup tiga x ndukung beliau  ga...
+Name: Komentar, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="word-normalization">
+<h1>Word Normalization<a class="headerlink" href="#word-normalization" title="Permalink to this heading">#</a></h1>
+<p><strong>Normalisasi Kata Tidak Baku</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#proses tokenisasi</span>
+<span class="c1"># from nltk.tokenize import TweetTokenizer</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+<span class="c1"># def word_tokenize(text):</span>
+<span class="c1">#   tokenizer = TweetTokenizer(preserve_case=False, strip_handles=True, reduce_len=True)</span>
+<span class="c1">#   return tokenizer.tokenize(text)</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;review_token&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Komentar&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">sentence</span><span class="p">:</span> <span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">sentence</span><span class="p">))</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;review_token&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     [benar, klo, kali, ini, pilih, prabowo, yg, in...
+1     [sak, karepmu, kono, pak, wowo, br, aku, bersa...
+2     [tak, bisa, di, percaya, lagi, bermuka, dua, h...
+3         [mantaaap, pak, prabowo, presiden, ke, amiin]
+4                          [nggak, tau, malu, si, wowo]
+5     [biarkan, sj, nt, klo, kalah, lagi, kan, bisa,...
+6                                      [piring, cantik]
+7     [kalau, tidak, jadi, mantri, kmaren, saya, sal...
+8                                        [prabowo, yes]
+9     [pak, prabowo, thn, ini, sdh, di, samping, pak...
+10                  [udh, mulai, kejang, lagi, pak, ya]
+11    [saya, pilih, pak, prabowo, saya, pilih, pak, ...
+12              [saya, pilih, dia, kasian, kalo, kalah]
+13               [wek, wek, semangat, pak, ganjarrrrrr]
+14                   [jngn, mau, kalo, jadi, cawapress]
+15                       [ridwan, kamil, yakin, menang]
+16    [agak, mudaan, dikit, lah, kalo, ketuaan, ntar...
+17    [biarkan, sj, mas, karena, ambisi, nya, sdh, s...
+18    [tetap, berjuang, dan, istiqomah, bersama, rak...
+19                                      [ps, bisa, yoo]
+20    [sak, karepmu, angel, angel, angel, angel, ten...
+21                        [merah, pleciden, plecidenan]
+22    [pancen, yo, koyo, ngono, kuwi, wes, angel, br...
+23                                       [prabowo, yes]
+24        [maju, terus, sekalipun, lawanmu, jan, ethes]
+25                                             [wkwkwk]
+26                                         [ganjr, lah]
+27    [maju, terserah, tidak, terserah, tetap, pilih...
+28                                      [maju, prabowo]
+29    [nyapres, trs, brow, kita, ttap, bersatu, padu...
+30    [merah, aku, yakin, kali, ini, dia, menang, ka...
+31    [firansyah, awas, ya, br, nanti, kalo, kalih, ...
+32                    [prabowo, pasti, bakalan, menang]
+33    [aku, enggak, lah, cukup, tiga, x, ndukung, be...
+Name: review_token, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;hasil normalisasi.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Normalisasi kata tidak baku</span>
+<span class="n">normalize</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/content/hasil normalisasi.csv&quot;</span><span class="p">)</span>
+
+<span class="n">normalize_word_dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">normalize</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+  <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">normalize_word_dict</span><span class="p">:</span>
+    <span class="n">normalize_word_dict</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">normalized_term</span><span class="p">(</span><span class="n">comment</span><span class="p">):</span>
+  <span class="k">return</span> <span class="p">[</span><span class="n">normalize_word_dict</span><span class="p">[</span><span class="n">term</span><span class="p">]</span> <span class="k">if</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">normalize_word_dict</span> <span class="k">else</span> <span class="n">term</span> <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">comment</span><span class="p">]</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;comment_normalize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;review_token&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalized_term</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;comment_normalize&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     [benar, klo, kali, ini, pilih, prabowo, yg, in...
+1     [sak, karepmu, kono, pak, wowo, br, aku, bersa...
+2     [tak, bisa, di, percaya, lagi, bermuka, dua, h...
+3         [mantaaap, pak, prabowo, presiden, ke, amiin]
+4                          [nggak, tau, malu, si, wowo]
+5     [biarkan, sj, nt, klo, kalah, lagi, kan, bisa,...
+6                                      [piring, cantik]
+7     [kalau, tidak, jadi, mantri, kmaren, saya, sal...
+8                                        [prabowo, yes]
+9     [pak, prabowo, thn, ini, sdh, di, samping, pak...
+10                  [udh, mulai, kejang, lagi, pak, ya]
+11    [saya, pilih, pak, prabowo, saya, pilih, pak, ...
+12              [saya, pilih, dia, kasian, kalo, kalah]
+13               [wek, wek, semangat, pak, ganjarrrrrr]
+14                   [jngn, mau, kalo, jadi, cawapress]
+15                       [ridwan, kamil, yakin, menang]
+16    [agak, mudaan, dikit, lah, kalo, ketuaan, ntar...
+17    [biarkan, sj, mas, karena, ambisi, nya, sdh, s...
+18    [tetap, berjuang, dan, istiqomah, bersama, rak...
+19                                      [ps, bisa, yoo]
+Name: comment_normalize, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Tokenizing</strong> (ada diatas)</p>
+</div>
+<div class="section" id="stopwords-removal">
+<h1><strong>Stopwords Removal</strong><a class="headerlink" href="#stopwords-removal" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Stopword Removal</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="n">txt_stopwords</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">stopwords_removal</span><span class="p">(</span><span class="n">filtering</span><span class="p">)</span> <span class="p">:</span>
+  <span class="n">filtering</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">filtering</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">txt_stopwords</span><span class="p">]</span>
+  <span class="k">return</span> <span class="n">filtering</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;stopwords_removal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;comment_normalize&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">stopwords_removal</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;stopwords_removal&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Unzipping corpora/stopwords.zip.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     [klo, kali, pilih, prabowo, yg, ikhlas, n, lap...
+1     [sak, karepmu, kono, wowo, br, kelg, besarku, ...
+2     [percaya, bermuka, haus, jabatan, dah, luntur,...
+3                  [mantaaap, prabowo, presiden, amiin]
+4                          [nggak, tau, malu, si, wowo]
+5     [biarkan, sj, nt, klo, kalah, dpt, lebel, capr...
+6                                      [piring, cantik]
+7     [mantri, kmaren, salud, skarang, gak, la, suar...
+8                                        [prabowo, yes]
+9     [prabowo, thn, sdh, samping, jokowi, beliaulah...
+10                                    [udh, kejang, ya]
+11                       [pilih, prabowo, pilih, anies]
+12                         [pilih, kasian, kalo, kalah]
+13                    [wek, wek, semangat, ganjarrrrrr]
+14                              [jngn, kalo, cawapress]
+15                              [ridwan, kamil, menang]
+16    [mudaan, dikit, kalo, ketuaan, ntar, kek, om, ...
+17    [biarkan, sj, mas, ambisi, nya, sdh, smp, ubun...
+18    [berjuang, istiqomah, rakyat, prabowo, pribadi...
+19                                            [ps, yoo]
+Name: stopwords_removal, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;hasil removal-1.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#stopword removal 2</span>
+<span class="n">data_stopwords</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/content/hasil removal-1.csv&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data_stopwords</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">stopwords_removal2</span><span class="p">(</span><span class="nb">filter</span><span class="p">)</span> <span class="p">:</span>
+  <span class="nb">filter</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">filter</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data_stopwords</span><span class="p">]</span>
+  <span class="k">return</span> <span class="nb">filter</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;stopwords_removal_final&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;stopwords_removal&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">stopwords_removal2</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;stopwords_removal_final&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                 Tanggal                  Nama  \
+0   2023-05-09T13:38:47Z          Heru Bambang   
+1   2023-05-08T01:40:08Z           Mawar Merah   
+2   2023-05-07T13:01:16Z            Jam Gadang   
+3   2023-05-06T10:14:00Z           Fitri Fitri   
+4   2023-05-05T15:51:38Z    Arjuna Putra pandu   
+5   2023-05-08T01:45:19Z           Mawar Merah   
+6   2023-05-03T19:07:45Z              Fahmyksa   
+7   2023-05-03T16:36:40Z            sapu jagad   
+8   2023-05-03T16:20:07Z             Afif Udin   
+9   2023-05-03T15:57:46Z                  TAMI   
+10  2023-05-03T15:41:48Z                Mir Za   
+11  2023-05-03T15:32:30Z          Ummie Dhalfa   
+12  2023-05-06T06:25:36Z      Sahwan Firansyah   
+13  2023-05-03T15:25:00Z         Yurnita bahar   
+14  2023-05-03T15:23:43Z       faisal abdillah   
+15  2023-05-03T14:46:36Z    Iqbal Raya Pratama   
+16  2023-05-03T14:43:48Z           I Am GoVlog   
+17  2023-05-08T01:47:43Z           Mawar Merah   
+18  2023-05-03T14:41:27Z           Samui Japan   
+19  2023-05-03T14:33:06Z           Abdul Komus   
+20  2023-05-03T14:28:29Z  Jeanne Vero  channel   
+21  2023-05-08T06:07:23Z  Jeanne Vero  channel   
+22  2023-05-08T01:52:05Z           Mawar Merah   
+23  2023-05-03T14:27:43Z         KUCING NGAPAK   
+24  2023-05-03T14:25:35Z         Tody setiawan   
+25  2023-05-03T14:23:02Z              Anh Kiia   
+26  2023-05-03T14:19:10Z         Hardian Idris   
+27  2023-05-03T14:17:26Z             Sigit p p   
+28  2023-05-03T14:17:10Z      Sigit Firmansyah   
+29  2023-05-03T14:15:05Z         Lina istianti   
+30  2023-05-10T00:54:47Z      Sahwan Firansyah   
+31  2023-05-08T01:55:46Z           Mawar Merah   
+32  2023-05-06T06:24:30Z      Sahwan Firansyah   
+33  2023-05-03T14:11:44Z        Rahmat Hidayat   
+
+                                             Komentar  likeCount  \
+0   benar klo kali ini pilih prabowo  yg  ini ikhl...          0   
+1   sak karepmu kono pak wowo         br aku bersa...          1   
+2   tak bisa di percaya lagi   bermuka dua   haus ...          0   
+3          mantaaap pak prabowo   presiden ke  amiin           0   
+4                           nggak tau malu si wowo             0   
+5   biarkan sj nt klo kalah lagi kan bisa dpt lebe...          1   
+6                                       piring cantik          0   
+7   kalau tidak jadi mantri kmaren saya salud tapi...          1   
+8                                         prabowo yes          0   
+9   pak prabowo thn ini sdh di samping pak jokowi ...          0   
+10                   udh mulai kejang lagi pak ya              1   
+11      saya pilih pak prabowo  saya pilih pak anies           2   
+12                   saya pilih dia kasian kalo kalah          0   
+13                   wek wek semangat pak ganjarrrrrr          0   
+14                       jngn mau kalo jadi cawapress          0   
+15                          ridwan kamil yakin menang          0   
+16  agak mudaan dikit lah   kalo ketuaan ntar mala...          1   
+17  biarkan sj mas karena ambisi nya sdh smp ke ub...          1   
+18  tetap berjuang dan istiqomah bersama rakyat pa...          0   
+19                                    ps     bisa yoo          0   
+20  sak karepmu angel angel angel angel tenan tutu...          1   
+21                      merah pleciden plecidenan              0   
+22  pancen yo koyo ngono kuwi wes angel        br ...          1   
+23                                        prabowo yes          0   
+24             maju terus sekalipun lawanmu jan ethes          2   
+25                                             wkwkwk          0   
+26                                      ganjr lah              2   
+27  maju terserah tidak terserah tetap pilihan kam...          0   
+28                                       maju prabowo          1   
+29  nyapres trs brow    kita ttap bersatu padu unt...          3   
+30    merah aku yakin kali ini dia menang karna ra...          0   
+31      firansyah awas ya      br nanti kalo kalih...          1   
+32                       prabowo pasti bakalan menang          1   
+33  aku enggak lah cukup tiga x ndukung beliau  ga...          0   
+
+                                         review_token  \
+0   [&#39;benar&#39;, &#39;klo&#39;, &#39;kali&#39;, &#39;ini&#39;, &#39;pilih&#39;, &#39;prab...   
+1   [&#39;sak&#39;, &#39;karepmu&#39;, &#39;kono&#39;, &#39;pak&#39;, &#39;wowo&#39;, &#39;br&#39;...   
+2   [&#39;tak&#39;, &#39;bisa&#39;, &#39;di&#39;, &#39;percaya&#39;, &#39;lagi&#39;, &#39;berm...   
+3   [&#39;mantaaap&#39;, &#39;pak&#39;, &#39;prabowo&#39;, &#39;presiden&#39;, &#39;ke...   
+4              [&#39;nggak&#39;, &#39;tau&#39;, &#39;malu&#39;, &#39;si&#39;, &#39;wowo&#39;]   
+5   [&#39;biarkan&#39;, &#39;sj&#39;, &#39;nt&#39;, &#39;klo&#39;, &#39;kalah&#39;, &#39;lagi&#39;...   
+6                                [&#39;piring&#39;, &#39;cantik&#39;]   
+7   [&#39;kalau&#39;, &#39;tidak&#39;, &#39;jadi&#39;, &#39;mantri&#39;, &#39;kmaren&#39;,...   
+8                                  [&#39;prabowo&#39;, &#39;yes&#39;]   
+9   [&#39;pak&#39;, &#39;prabowo&#39;, &#39;thn&#39;, &#39;ini&#39;, &#39;sdh&#39;, &#39;di&#39;, ...   
+10    [&#39;udh&#39;, &#39;mulai&#39;, &#39;kejang&#39;, &#39;lagi&#39;, &#39;pak&#39;, &#39;ya&#39;]   
+11  [&#39;saya&#39;, &#39;pilih&#39;, &#39;pak&#39;, &#39;prabowo&#39;, &#39;saya&#39;, &#39;p...   
+12  [&#39;saya&#39;, &#39;pilih&#39;, &#39;dia&#39;, &#39;kasian&#39;, &#39;kalo&#39;, &#39;ka...   
+13   [&#39;wek&#39;, &#39;wek&#39;, &#39;semangat&#39;, &#39;pak&#39;, &#39;ganjarrrrrr&#39;]   
+14       [&#39;jngn&#39;, &#39;mau&#39;, &#39;kalo&#39;, &#39;jadi&#39;, &#39;cawapress&#39;]   
+15             [&#39;ridwan&#39;, &#39;kamil&#39;, &#39;yakin&#39;, &#39;menang&#39;]   
+16  [&#39;agak&#39;, &#39;mudaan&#39;, &#39;dikit&#39;, &#39;lah&#39;, &#39;kalo&#39;, &#39;ke...   
+17  [&#39;biarkan&#39;, &#39;sj&#39;, &#39;mas&#39;, &#39;karena&#39;, &#39;ambisi&#39;, &#39;...   
+18  [&#39;tetap&#39;, &#39;berjuang&#39;, &#39;dan&#39;, &#39;istiqomah&#39;, &#39;ber...   
+19                              [&#39;ps&#39;, &#39;bisa&#39;, &#39;yoo&#39;]   
+20  [&#39;sak&#39;, &#39;karepmu&#39;, &#39;angel&#39;, &#39;angel&#39;, &#39;angel&#39;, ...   
+21                [&#39;merah&#39;, &#39;pleciden&#39;, &#39;plecidenan&#39;]   
+22  [&#39;pancen&#39;, &#39;yo&#39;, &#39;koyo&#39;, &#39;ngono&#39;, &#39;kuwi&#39;, &#39;wes...   
+23                                 [&#39;prabowo&#39;, &#39;yes&#39;]   
+24  [&#39;maju&#39;, &#39;terus&#39;, &#39;sekalipun&#39;, &#39;lawanmu&#39;, &#39;jan...   
+25                                         [&#39;wkwkwk&#39;]   
+26                                   [&#39;ganjr&#39;, &#39;lah&#39;]   
+27  [&#39;maju&#39;, &#39;terserah&#39;, &#39;tidak&#39;, &#39;terserah&#39;, &#39;tet...   
+28                                [&#39;maju&#39;, &#39;prabowo&#39;]   
+29  [&#39;nyapres&#39;, &#39;trs&#39;, &#39;brow&#39;, &#39;kita&#39;, &#39;ttap&#39;, &#39;be...   
+30  [&#39;merah&#39;, &#39;aku&#39;, &#39;yakin&#39;, &#39;kali&#39;, &#39;ini&#39;, &#39;dia&#39;...   
+31  [&#39;firansyah&#39;, &#39;awas&#39;, &#39;ya&#39;, &#39;br&#39;, &#39;nanti&#39;, &#39;ka...   
+32          [&#39;prabowo&#39;, &#39;pasti&#39;, &#39;bakalan&#39;, &#39;menang&#39;]   
+33  [&#39;aku&#39;, &#39;enggak&#39;, &#39;lah&#39;, &#39;cukup&#39;, &#39;tiga&#39;, &#39;x&#39;,...   
+
+                                    comment_normalize  \
+0   [&#39;benar&#39;, &#39;klo&#39;, &#39;kali&#39;, &#39;ini&#39;, &#39;pilih&#39;, &#39;prab...   
+1   [&#39;sak&#39;, &#39;karepmu&#39;, &#39;kono&#39;, &#39;pak&#39;, &#39;wowo&#39;, &#39;br&#39;...   
+2   [&#39;tak&#39;, &#39;bisa&#39;, &#39;di&#39;, &#39;percaya&#39;, &#39;lagi&#39;, &#39;berm...   
+3   [&#39;mantaaap&#39;, &#39;pak&#39;, &#39;prabowo&#39;, &#39;presiden&#39;, &#39;ke...   
+4              [&#39;nggak&#39;, &#39;tau&#39;, &#39;malu&#39;, &#39;si&#39;, &#39;wowo&#39;]   
+5   [&#39;biarkan&#39;, &#39;sj&#39;, &#39;nt&#39;, &#39;klo&#39;, &#39;kalah&#39;, &#39;lagi&#39;...   
+6                                [&#39;piring&#39;, &#39;cantik&#39;]   
+7   [&#39;kalau&#39;, &#39;tidak&#39;, &#39;jadi&#39;, &#39;mantri&#39;, &#39;kmaren&#39;,...   
+8                                  [&#39;prabowo&#39;, &#39;yes&#39;]   
+9   [&#39;pak&#39;, &#39;prabowo&#39;, &#39;thn&#39;, &#39;ini&#39;, &#39;sdh&#39;, &#39;di&#39;, ...   
+10    [&#39;udh&#39;, &#39;mulai&#39;, &#39;kejang&#39;, &#39;lagi&#39;, &#39;pak&#39;, &#39;ya&#39;]   
+11  [&#39;saya&#39;, &#39;pilih&#39;, &#39;pak&#39;, &#39;prabowo&#39;, &#39;saya&#39;, &#39;p...   
+12  [&#39;saya&#39;, &#39;pilih&#39;, &#39;dia&#39;, &#39;kasian&#39;, &#39;kalo&#39;, &#39;ka...   
+13   [&#39;wek&#39;, &#39;wek&#39;, &#39;semangat&#39;, &#39;pak&#39;, &#39;ganjarrrrrr&#39;]   
+14       [&#39;jngn&#39;, &#39;mau&#39;, &#39;kalo&#39;, &#39;jadi&#39;, &#39;cawapress&#39;]   
+15             [&#39;ridwan&#39;, &#39;kamil&#39;, &#39;yakin&#39;, &#39;menang&#39;]   
+16  [&#39;agak&#39;, &#39;mudaan&#39;, &#39;dikit&#39;, &#39;lah&#39;, &#39;kalo&#39;, &#39;ke...   
+17  [&#39;biarkan&#39;, &#39;sj&#39;, &#39;mas&#39;, &#39;karena&#39;, &#39;ambisi&#39;, &#39;...   
+18  [&#39;tetap&#39;, &#39;berjuang&#39;, &#39;dan&#39;, &#39;istiqomah&#39;, &#39;ber...   
+19                              [&#39;ps&#39;, &#39;bisa&#39;, &#39;yoo&#39;]   
+20  [&#39;sak&#39;, &#39;karepmu&#39;, &#39;angel&#39;, &#39;angel&#39;, &#39;angel&#39;, ...   
+21                [&#39;merah&#39;, &#39;pleciden&#39;, &#39;plecidenan&#39;]   
+22  [&#39;pancen&#39;, &#39;yo&#39;, &#39;koyo&#39;, &#39;ngono&#39;, &#39;kuwi&#39;, &#39;wes...   
+23                                 [&#39;prabowo&#39;, &#39;yes&#39;]   
+24  [&#39;maju&#39;, &#39;terus&#39;, &#39;sekalipun&#39;, &#39;lawanmu&#39;, &#39;jan...   
+25                                         [&#39;wkwkwk&#39;]   
+26                                   [&#39;ganjr&#39;, &#39;lah&#39;]   
+27  [&#39;maju&#39;, &#39;terserah&#39;, &#39;tidak&#39;, &#39;terserah&#39;, &#39;tet...   
+28                                [&#39;maju&#39;, &#39;prabowo&#39;]   
+29  [&#39;nyapres&#39;, &#39;trs&#39;, &#39;brow&#39;, &#39;kita&#39;, &#39;ttap&#39;, &#39;be...   
+30  [&#39;merah&#39;, &#39;aku&#39;, &#39;yakin&#39;, &#39;kali&#39;, &#39;ini&#39;, &#39;dia&#39;...   
+31  [&#39;firansyah&#39;, &#39;awas&#39;, &#39;ya&#39;, &#39;br&#39;, &#39;nanti&#39;, &#39;ka...   
+32          [&#39;prabowo&#39;, &#39;pasti&#39;, &#39;bakalan&#39;, &#39;menang&#39;]   
+33  [&#39;aku&#39;, &#39;enggak&#39;, &#39;lah&#39;, &#39;cukup&#39;, &#39;tiga&#39;, &#39;x&#39;,...   
+
+                                    stopwords_removal  
+0   [&#39;klo&#39;, &#39;kali&#39;, &#39;pilih&#39;, &#39;prabowo&#39;, &#39;yg&#39;, &#39;ikh...  
+1   [&#39;sak&#39;, &#39;karepmu&#39;, &#39;kono&#39;, &#39;wowo&#39;, &#39;br&#39;, &#39;kelg...  
+2   [&#39;percaya&#39;, &#39;bermuka&#39;, &#39;haus&#39;, &#39;jabatan&#39;, &#39;dah...  
+3        [&#39;mantaaap&#39;, &#39;prabowo&#39;, &#39;presiden&#39;, &#39;amiin&#39;]  
+4              [&#39;nggak&#39;, &#39;tau&#39;, &#39;malu&#39;, &#39;si&#39;, &#39;wowo&#39;]  
+5   [&#39;biarkan&#39;, &#39;sj&#39;, &#39;nt&#39;, &#39;klo&#39;, &#39;kalah&#39;, &#39;dpt&#39;,...  
+6                                [&#39;piring&#39;, &#39;cantik&#39;]  
+7   [&#39;mantri&#39;, &#39;kmaren&#39;, &#39;salud&#39;, &#39;skarang&#39;, &#39;gak&#39;...  
+8                                  [&#39;prabowo&#39;, &#39;yes&#39;]  
+9   [&#39;prabowo&#39;, &#39;thn&#39;, &#39;sdh&#39;, &#39;samping&#39;, &#39;jokowi&#39;,...  
+10                            [&#39;udh&#39;, &#39;kejang&#39;, &#39;ya&#39;]  
+11             [&#39;pilih&#39;, &#39;prabowo&#39;, &#39;pilih&#39;, &#39;anies&#39;]  
+12               [&#39;pilih&#39;, &#39;kasian&#39;, &#39;kalo&#39;, &#39;kalah&#39;]  
+13          [&#39;wek&#39;, &#39;wek&#39;, &#39;semangat&#39;, &#39;ganjarrrrrr&#39;]  
+14                      [&#39;jngn&#39;, &#39;kalo&#39;, &#39;cawapress&#39;]  
+15                      [&#39;ridwan&#39;, &#39;kamil&#39;, &#39;menang&#39;]  
+16  [&#39;mudaan&#39;, &#39;dikit&#39;, &#39;kalo&#39;, &#39;ketuaan&#39;, &#39;ntar&#39;,...  
+17  [&#39;biarkan&#39;, &#39;sj&#39;, &#39;mas&#39;, &#39;ambisi&#39;, &#39;nya&#39;, &#39;sdh...  
+18  [&#39;berjuang&#39;, &#39;istiqomah&#39;, &#39;rakyat&#39;, &#39;prabowo&#39;,...  
+19                                      [&#39;ps&#39;, &#39;yoo&#39;]  
+20  [&#39;sak&#39;, &#39;karepmu&#39;, &#39;angel&#39;, &#39;angel&#39;, &#39;angel&#39;, ...  
+21                [&#39;merah&#39;, &#39;pleciden&#39;, &#39;plecidenan&#39;]  
+22  [&#39;pancen&#39;, &#39;yo&#39;, &#39;koyo&#39;, &#39;ngono&#39;, &#39;kuwi&#39;, &#39;wes...  
+23                                 [&#39;prabowo&#39;, &#39;yes&#39;]  
+24                [&#39;maju&#39;, &#39;lawanmu&#39;, &#39;jan&#39;, &#39;ethes&#39;]  
+25                                         [&#39;wkwkwk&#39;]  
+26                                          [&#39;ganjr&#39;]  
+27  [&#39;maju&#39;, &#39;terserah&#39;, &#39;terserah&#39;, &#39;pilihan&#39;, &#39;c...  
+28                                [&#39;maju&#39;, &#39;prabowo&#39;]  
+29  [&#39;nyapres&#39;, &#39;trs&#39;, &#39;brow&#39;, &#39;ttap&#39;, &#39;bersatu&#39;, ...  
+30  [&#39;merah&#39;, &#39;kali&#39;, &#39;menang&#39;, &#39;karna&#39;, &#39;raykat&#39;,...  
+31  [&#39;firansyah&#39;, &#39;awas&#39;, &#39;ya&#39;, &#39;br&#39;, &#39;kalo&#39;, &#39;kal...  
+32                              [&#39;prabowo&#39;, &#39;menang&#39;]  
+33  [&#39;x&#39;, &#39;ndukung&#39;, &#39;beliau&#39;, &#39;ganti&#39;, &#39;yg&#39;, &#39;muda&#39;]  
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     [klo, kali, pilih, prabowo, yg, ikhlas, n, lap...
+1     [sak, karepmu, kono, wowo, br, kelg, besarku, ...
+2     [percaya, bermuka, haus, jabatan, dah, luntur,...
+3                  [mantaaap, prabowo, presiden, amiin]
+4                          [nggak, tau, malu, si, wowo]
+5     [biarkan, sj, nt, klo, kalah, dpt, lebel, capr...
+6                                      [piring, cantik]
+7     [mantri, kmaren, salud, skarang, gak, la, suar...
+8                                        [prabowo, yes]
+9     [prabowo, thn, sdh, samping, jokowi, beliaulah...
+10                                    [udh, kejang, ya]
+11                       [pilih, prabowo, pilih, anies]
+12                         [pilih, kasian, kalo, kalah]
+13                    [wek, wek, semangat, ganjarrrrrr]
+14                              [jngn, kalo, cawapress]
+15                              [ridwan, kamil, menang]
+16    [mudaan, dikit, kalo, ketuaan, ntar, kek, om, ...
+17    [biarkan, sj, mas, ambisi, nya, sdh, smp, ubun...
+18    [berjuang, istiqomah, rakyat, prabowo, pribadi...
+19                                            [ps, yoo]
+Name: stopwords_removal_final, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="stemming">
+<h1><strong>Stemming</strong><a class="headerlink" href="#stemming" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#proses stem</span>
+<span class="kn">from</span> <span class="nn">Sastrawi.Stemmer.StemmerFactory</span> <span class="kn">import</span> <span class="n">StemmerFactory</span>
+<span class="kn">import</span> <span class="nn">string</span>
+<span class="kn">import</span> <span class="nn">swifter</span>
+<span class="n">factory</span> <span class="o">=</span> <span class="n">StemmerFactory</span><span class="p">()</span>
+<span class="n">stemmer</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="n">create_stemmer</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">stemming</span> <span class="p">(</span><span class="n">term</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+
+<span class="n">term_dict</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">document</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;stopwords_removal_final&#39;</span><span class="p">]:</span>
+  <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">document</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">term</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">term_dict</span><span class="p">:</span>
+      <span class="n">term_dict</span><span class="p">[</span><span class="n">term</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">term_dict</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----------------------------&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>191
+-----------------------------
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">term_dict</span><span class="p">:</span>
+  <span class="n">term_dict</span><span class="p">[</span><span class="n">term</span><span class="p">]</span> <span class="o">=</span> <span class="n">stemming</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="p">,</span><span class="s2">&quot;:&quot;</span><span class="p">,</span><span class="n">term_dict</span><span class="p">[</span><span class="n">term</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">term_dict</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----------------------------&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>klo : klo
+kali : kali
+pilih : pilih
+prabowo : prabowo
+yg : yg
+ikhlas : ikhlas
+n : n
+lapang : lapang
+dada : dada
+berpandangan : pandang
+luas : luas
+sak : sak
+karepmu : karepmu
+kono : kono
+wowo : wowo
+br : br
+kelg : kelg
+besarku : besar
+jakarta : jakarta
+amp : amp
+bekasi : bekas
+dukung : dukung
+ganjar : ganjar
+pranowo : pranowo
+berjuang : juang
+kesejahteraan : sejahtera
+rakyat : rakyat
+indonesia : indonesia
+bohir : bohir
+cendana : cendana
+skrg : skrg
+sdh : sdh
+pd : pd
+merepat : merepat
+mendekat : dekat
+merdeka : merdeka
+sll : sll
+dihati : hati
+dinanti : nanti
+percaya : percaya
+bermuka : muka
+haus : haus
+jabatan : jabat
+dah : dah
+luntur : luntur
+kepercayaan : percaya
+terpecah : pecah
+eh : eh
+manunggaling : manunggaling
+jokowi : jokowi
+wo : wo
+ampun : ampun
+deh : deh
+mantaaap : mantaaap
+presiden : presiden
+amiin : amiin
+nggak : nggak
+tau : tau
+malu : malu
+si : si
+biarkan : biar
+sj : sj
+nt : nt
+kalah : kalah
+dpt : dpt
+lebel : lebel
+capres : capres
+abadi : abadi
+tho : tho
+piring : piring
+cantik : cantik
+mantri : mantri
+kmaren : kmaren
+salud : salud
+skarang : skarang
+gak : gak
+la : la
+suara : suara
+kmai : kmai
+anis : anis
+aja : aja
+yes : yes
+thn : thn
+samping : samping
+beliaulah : biau
+mengerti : erti
+kemauan : mau
+maju : maju
+udh : udh
+kejang : kejang
+ya : ya
+anies : anies
+kasian : kasi
+kalo : kalo
+wek : wek
+semangat : semangat
+ganjarrrrrr : ganjarrrrrr
+jngn : jngn
+cawapress : cawapress
+ridwan : ridwan
+kamil : kamil
+menang : menang
+mudaan : muda
+dikit : dikit
+ketuaan : ketua
+ntar : ntar
+kek : kek
+om : om
+biden : biden
+pidato : pidato
+linglung : linglung
+mas : mas
+ambisi : ambisi
+nya : nya
+smp : smp
+ubun : ubun
+pengen : ken
+pleciden : pleciden
+x : x
+istiqomah : istiqomah
+pribadi : pribadi
+mendukung : dukung
+beliau : beliau
+negeri : negeri
+orang : orang
+for : for
+ps : ps
+yoo : yoo
+angel : angel
+tenan : tenan
+tuturanmu : tutur
+sing : sing
+pilihan : pilih
+ku : ku
+merah : merah
+plecidenan : plecidenan
+pancen : pancen
+yo : yo
+koyo : koyo
+ngono : ngono
+kuwi : kuwi
+wes : wes
+ora : ora
+nyawang : nyawang
+umur : umur
+kekuatan : kuat
+awak : awak
+loyo : loyo
+mlaku : mlaku
+wae : wae
+arep : arep
+tibo : tibo
+isih : isih
+ngoyo : ngoyo
+dadi : dadi
+mengko : mengko
+yen : yen
+lawanmu : lawan
+jan : jan
+ethes : ethes
+wkwkwk : wkwkwk
+ganjr : ganjr
+terserah : serah
+istri : istri
+nyapres : nyapres
+trs : trs
+brow : brow
+ttap : ttap
+bersatu : satu
+padu : padu
+menumbang : tumbang
+mu : mu
+smg : smg
+negara : negara
+ri : ri
+pimpin : pimpin
+baswedan : baswedan
+aamiin : aamiin
+karna : karna
+raykat : raykat
+firansyah : firansyah
+awas : awas
+kalih : kalih
+jgn : jgn
+nangis : nang
+hadiah : hadiah
+dr : dr
+label : label
+ndukung : ndukung
+ganti : ganti
+muda : muda
+{&#39;klo&#39;: &#39;klo&#39;, &#39;kali&#39;: &#39;kali&#39;, &#39;pilih&#39;: &#39;pilih&#39;, &#39;prabowo&#39;: &#39;prabowo&#39;, &#39;yg&#39;: &#39;yg&#39;, &#39;ikhlas&#39;: &#39;ikhlas&#39;, &#39;n&#39;: &#39;n&#39;, &#39;lapang&#39;: &#39;lapang&#39;, &#39;dada&#39;: &#39;dada&#39;, &#39;berpandangan&#39;: &#39;pandang&#39;, &#39;luas&#39;: &#39;luas&#39;, &#39;sak&#39;: &#39;sak&#39;, &#39;karepmu&#39;: &#39;karepmu&#39;, &#39;kono&#39;: &#39;kono&#39;, &#39;wowo&#39;: &#39;wowo&#39;, &#39;br&#39;: &#39;br&#39;, &#39;kelg&#39;: &#39;kelg&#39;, &#39;besarku&#39;: &#39;besar&#39;, &#39;jakarta&#39;: &#39;jakarta&#39;, &#39;amp&#39;: &#39;amp&#39;, &#39;bekasi&#39;: &#39;bekas&#39;, &#39;dukung&#39;: &#39;dukung&#39;, &#39;ganjar&#39;: &#39;ganjar&#39;, &#39;pranowo&#39;: &#39;pranowo&#39;, &#39;berjuang&#39;: &#39;juang&#39;, &#39;kesejahteraan&#39;: &#39;sejahtera&#39;, &#39;rakyat&#39;: &#39;rakyat&#39;, &#39;indonesia&#39;: &#39;indonesia&#39;, &#39;bohir&#39;: &#39;bohir&#39;, &#39;cendana&#39;: &#39;cendana&#39;, &#39;skrg&#39;: &#39;skrg&#39;, &#39;sdh&#39;: &#39;sdh&#39;, &#39;pd&#39;: &#39;pd&#39;, &#39;merepat&#39;: &#39;merepat&#39;, &#39;mendekat&#39;: &#39;dekat&#39;, &#39;merdeka&#39;: &#39;merdeka&#39;, &#39;sll&#39;: &#39;sll&#39;, &#39;dihati&#39;: &#39;hati&#39;, &#39;dinanti&#39;: &#39;nanti&#39;, &#39;percaya&#39;: &#39;percaya&#39;, &#39;bermuka&#39;: &#39;muka&#39;, &#39;haus&#39;: &#39;haus&#39;, &#39;jabatan&#39;: &#39;jabat&#39;, &#39;dah&#39;: &#39;dah&#39;, &#39;luntur&#39;: &#39;luntur&#39;, &#39;kepercayaan&#39;: &#39;percaya&#39;, &#39;terpecah&#39;: &#39;pecah&#39;, &#39;eh&#39;: &#39;eh&#39;, &#39;manunggaling&#39;: &#39;manunggaling&#39;, &#39;jokowi&#39;: &#39;jokowi&#39;, &#39;wo&#39;: &#39;wo&#39;, &#39;ampun&#39;: &#39;ampun&#39;, &#39;deh&#39;: &#39;deh&#39;, &#39;mantaaap&#39;: &#39;mantaaap&#39;, &#39;presiden&#39;: &#39;presiden&#39;, &#39;amiin&#39;: &#39;amiin&#39;, &#39;nggak&#39;: &#39;nggak&#39;, &#39;tau&#39;: &#39;tau&#39;, &#39;malu&#39;: &#39;malu&#39;, &#39;si&#39;: &#39;si&#39;, &#39;biarkan&#39;: &#39;biar&#39;, &#39;sj&#39;: &#39;sj&#39;, &#39;nt&#39;: &#39;nt&#39;, &#39;kalah&#39;: &#39;kalah&#39;, &#39;dpt&#39;: &#39;dpt&#39;, &#39;lebel&#39;: &#39;lebel&#39;, &#39;capres&#39;: &#39;capres&#39;, &#39;abadi&#39;: &#39;abadi&#39;, &#39;tho&#39;: &#39;tho&#39;, &#39;piring&#39;: &#39;piring&#39;, &#39;cantik&#39;: &#39;cantik&#39;, &#39;mantri&#39;: &#39;mantri&#39;, &#39;kmaren&#39;: &#39;kmaren&#39;, &#39;salud&#39;: &#39;salud&#39;, &#39;skarang&#39;: &#39;skarang&#39;, &#39;gak&#39;: &#39;gak&#39;, &#39;la&#39;: &#39;la&#39;, &#39;suara&#39;: &#39;suara&#39;, &#39;kmai&#39;: &#39;kmai&#39;, &#39;anis&#39;: &#39;anis&#39;, &#39;aja&#39;: &#39;aja&#39;, &#39;yes&#39;: &#39;yes&#39;, &#39;thn&#39;: &#39;thn&#39;, &#39;samping&#39;: &#39;samping&#39;, &#39;beliaulah&#39;: &#39;biau&#39;, &#39;mengerti&#39;: &#39;erti&#39;, &#39;kemauan&#39;: &#39;mau&#39;, &#39;maju&#39;: &#39;maju&#39;, &#39;udh&#39;: &#39;udh&#39;, &#39;kejang&#39;: &#39;kejang&#39;, &#39;ya&#39;: &#39;ya&#39;, &#39;anies&#39;: &#39;anies&#39;, &#39;kasian&#39;: &#39;kasi&#39;, &#39;kalo&#39;: &#39;kalo&#39;, &#39;wek&#39;: &#39;wek&#39;, &#39;semangat&#39;: &#39;semangat&#39;, &#39;ganjarrrrrr&#39;: &#39;ganjarrrrrr&#39;, &#39;jngn&#39;: &#39;jngn&#39;, &#39;cawapress&#39;: &#39;cawapress&#39;, &#39;ridwan&#39;: &#39;ridwan&#39;, &#39;kamil&#39;: &#39;kamil&#39;, &#39;menang&#39;: &#39;menang&#39;, &#39;mudaan&#39;: &#39;muda&#39;, &#39;dikit&#39;: &#39;dikit&#39;, &#39;ketuaan&#39;: &#39;ketua&#39;, &#39;ntar&#39;: &#39;ntar&#39;, &#39;kek&#39;: &#39;kek&#39;, &#39;om&#39;: &#39;om&#39;, &#39;biden&#39;: &#39;biden&#39;, &#39;pidato&#39;: &#39;pidato&#39;, &#39;linglung&#39;: &#39;linglung&#39;, &#39;mas&#39;: &#39;mas&#39;, &#39;ambisi&#39;: &#39;ambisi&#39;, &#39;nya&#39;: &#39;nya&#39;, &#39;smp&#39;: &#39;smp&#39;, &#39;ubun&#39;: &#39;ubun&#39;, &#39;pengen&#39;: &#39;ken&#39;, &#39;pleciden&#39;: &#39;pleciden&#39;, &#39;x&#39;: &#39;x&#39;, &#39;istiqomah&#39;: &#39;istiqomah&#39;, &#39;pribadi&#39;: &#39;pribadi&#39;, &#39;mendukung&#39;: &#39;dukung&#39;, &#39;beliau&#39;: &#39;beliau&#39;, &#39;negeri&#39;: &#39;negeri&#39;, &#39;orang&#39;: &#39;orang&#39;, &#39;for&#39;: &#39;for&#39;, &#39;ps&#39;: &#39;ps&#39;, &#39;yoo&#39;: &#39;yoo&#39;, &#39;angel&#39;: &#39;angel&#39;, &#39;tenan&#39;: &#39;tenan&#39;, &#39;tuturanmu&#39;: &#39;tutur&#39;, &#39;sing&#39;: &#39;sing&#39;, &#39;pilihan&#39;: &#39;pilih&#39;, &#39;ku&#39;: &#39;ku&#39;, &#39;merah&#39;: &#39;merah&#39;, &#39;plecidenan&#39;: &#39;plecidenan&#39;, &#39;pancen&#39;: &#39;pancen&#39;, &#39;yo&#39;: &#39;yo&#39;, &#39;koyo&#39;: &#39;koyo&#39;, &#39;ngono&#39;: &#39;ngono&#39;, &#39;kuwi&#39;: &#39;kuwi&#39;, &#39;wes&#39;: &#39;wes&#39;, &#39;ora&#39;: &#39;ora&#39;, &#39;nyawang&#39;: &#39;nyawang&#39;, &#39;umur&#39;: &#39;umur&#39;, &#39;kekuatan&#39;: &#39;kuat&#39;, &#39;awak&#39;: &#39;awak&#39;, &#39;loyo&#39;: &#39;loyo&#39;, &#39;mlaku&#39;: &#39;mlaku&#39;, &#39;wae&#39;: &#39;wae&#39;, &#39;arep&#39;: &#39;arep&#39;, &#39;tibo&#39;: &#39;tibo&#39;, &#39;isih&#39;: &#39;isih&#39;, &#39;ngoyo&#39;: &#39;ngoyo&#39;, &#39;dadi&#39;: &#39;dadi&#39;, &#39;mengko&#39;: &#39;mengko&#39;, &#39;yen&#39;: &#39;yen&#39;, &#39;lawanmu&#39;: &#39;lawan&#39;, &#39;jan&#39;: &#39;jan&#39;, &#39;ethes&#39;: &#39;ethes&#39;, &#39;wkwkwk&#39;: &#39;wkwkwk&#39;, &#39;ganjr&#39;: &#39;ganjr&#39;, &#39;terserah&#39;: &#39;serah&#39;, &#39;istri&#39;: &#39;istri&#39;, &#39;nyapres&#39;: &#39;nyapres&#39;, &#39;trs&#39;: &#39;trs&#39;, &#39;brow&#39;: &#39;brow&#39;, &#39;ttap&#39;: &#39;ttap&#39;, &#39;bersatu&#39;: &#39;satu&#39;, &#39;padu&#39;: &#39;padu&#39;, &#39;menumbang&#39;: &#39;tumbang&#39;, &#39;mu&#39;: &#39;mu&#39;, &#39;smg&#39;: &#39;smg&#39;, &#39;negara&#39;: &#39;negara&#39;, &#39;ri&#39;: &#39;ri&#39;, &#39;pimpin&#39;: &#39;pimpin&#39;, &#39;baswedan&#39;: &#39;baswedan&#39;, &#39;aamiin&#39;: &#39;aamiin&#39;, &#39;karna&#39;: &#39;karna&#39;, &#39;raykat&#39;: &#39;raykat&#39;, &#39;firansyah&#39;: &#39;firansyah&#39;, &#39;awas&#39;: &#39;awas&#39;, &#39;kalih&#39;: &#39;kalih&#39;, &#39;jgn&#39;: &#39;jgn&#39;, &#39;nangis&#39;: &#39;nang&#39;, &#39;hadiah&#39;: &#39;hadiah&#39;, &#39;dr&#39;: &#39;dr&#39;, &#39;label&#39;: &#39;label&#39;, &#39;ndukung&#39;: &#39;ndukung&#39;, &#39;ganti&#39;: &#39;ganti&#39;, &#39;muda&#39;: &#39;muda&#39;}
+-----------------------------
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_stemming</span><span class="p">(</span><span class="n">document</span><span class="p">):</span>
+  <span class="k">return</span> <span class="p">[</span><span class="n">term_dict</span><span class="p">[</span><span class="n">term</span><span class="p">]</span> <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">document</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;stemming&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;stopwords_removal_final&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">swifter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">get_stemming</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "1e86dd6806f1454bbd978d740d5f2c99"}</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;stemming&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     [klo, kali, pilih, prabowo, yg, ikhlas, n, lap...
+1     [sak, karepmu, kono, wowo, br, kelg, besar, ja...
+2     [percaya, muka, haus, jabat, dah, luntur, perc...
+3                  [mantaaap, prabowo, presiden, amiin]
+4                          [nggak, tau, malu, si, wowo]
+5     [biar, sj, nt, klo, kalah, dpt, lebel, capres,...
+6                                      [piring, cantik]
+7     [mantri, kmaren, salud, skarang, gak, la, suar...
+8                                        [prabowo, yes]
+9     [prabowo, thn, sdh, samping, jokowi, biau, yg,...
+10                                    [udh, kejang, ya]
+11                       [pilih, prabowo, pilih, anies]
+12                           [pilih, kasi, kalo, kalah]
+13                    [wek, wek, semangat, ganjarrrrrr]
+14                              [jngn, kalo, cawapress]
+15                              [ridwan, kamil, menang]
+16    [muda, dikit, kalo, ketua, ntar, kek, om, bide...
+17    [biar, sj, mas, ambisi, nya, sdh, smp, ubun, k...
+18    [juang, istiqomah, rakyat, prabowo, pribadi, d...
+19                                            [ps, yoo]
+20    [sak, karepmu, angel, angel, angel, angel, ten...
+21                        [merah, pleciden, plecidenan]
+22    [pancen, yo, koyo, ngono, kuwi, wes, angel, br...
+23                                       [prabowo, yes]
+24                            [maju, lawan, jan, ethes]
+25                                             [wkwkwk]
+26                                              [ganjr]
+27    [maju, serah, serah, pilih, capres, yg, istri,...
+28                                      [maju, prabowo]
+29    [nyapres, trs, brow, ttap, satu, padu, tumbang...
+30           [merah, kali, menang, karna, raykat, kasi]
+31    [firansyah, awas, ya, br, kalo, kalih, jgn, na...
+32                                    [prabowo, menang]
+33                [x, ndukung, beliau, ganti, yg, muda]
+Name: stemming, dtype: object
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-fcd6b2f2-e029-4f96-bd44-6d36a5e09187">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Tanggal</th>
+      <th>Nama</th>
+      <th>Komentar</th>
+      <th>likeCount</th>
+      <th>review_token</th>
+      <th>comment_normalize</th>
+      <th>stopwords_removal</th>
+      <th>stopwords_removal_final</th>
+      <th>stemming</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2023-05-09T13:38:47Z</td>
+      <td>Heru Bambang</td>
+      <td>benar klo kali ini pilih prabowo  yg  ini ikhl...</td>
+      <td>0</td>
+      <td>[benar, klo, kali, ini, pilih, prabowo, yg, in...</td>
+      <td>[benar, klo, kali, ini, pilih, prabowo, yg, in...</td>
+      <td>[klo, kali, pilih, prabowo, yg, ikhlas, n, lap...</td>
+      <td>[klo, kali, pilih, prabowo, yg, ikhlas, n, lap...</td>
+      <td>[klo, kali, pilih, prabowo, yg, ikhlas, n, lap...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2023-05-08T01:40:08Z</td>
+      <td>Mawar Merah</td>
+      <td>sak karepmu kono pak wowo         br aku bersa...</td>
+      <td>1</td>
+      <td>[sak, karepmu, kono, pak, wowo, br, aku, bersa...</td>
+      <td>[sak, karepmu, kono, pak, wowo, br, aku, bersa...</td>
+      <td>[sak, karepmu, kono, wowo, br, kelg, besarku, ...</td>
+      <td>[sak, karepmu, kono, wowo, br, kelg, besarku, ...</td>
+      <td>[sak, karepmu, kono, wowo, br, kelg, besar, ja...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2023-05-07T13:01:16Z</td>
+      <td>Jam Gadang</td>
+      <td>tak bisa di percaya lagi   bermuka dua   haus ...</td>
+      <td>0</td>
+      <td>[tak, bisa, di, percaya, lagi, bermuka, dua, h...</td>
+      <td>[tak, bisa, di, percaya, lagi, bermuka, dua, h...</td>
+      <td>[percaya, bermuka, haus, jabatan, dah, luntur,...</td>
+      <td>[percaya, bermuka, haus, jabatan, dah, luntur,...</td>
+      <td>[percaya, muka, haus, jabat, dah, luntur, perc...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2023-05-06T10:14:00Z</td>
+      <td>Fitri Fitri</td>
+      <td>mantaaap pak prabowo   presiden ke  amiin</td>
+      <td>0</td>
+      <td>[mantaaap, pak, prabowo, presiden, ke, amiin]</td>
+      <td>[mantaaap, pak, prabowo, presiden, ke, amiin]</td>
+      <td>[mantaaap, prabowo, presiden, amiin]</td>
+      <td>[mantaaap, prabowo, presiden, amiin]</td>
+      <td>[mantaaap, prabowo, presiden, amiin]</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2023-05-05T15:51:38Z</td>
+      <td>Arjuna Putra pandu</td>
+      <td>nggak tau malu si wowo</td>
+      <td>0</td>
+      <td>[nggak, tau, malu, si, wowo]</td>
+      <td>[nggak, tau, malu, si, wowo]</td>
+      <td>[nggak, tau, malu, si, wowo]</td>
+      <td>[nggak, tau, malu, si, wowo]</td>
+      <td>[nggak, tau, malu, si, wowo]</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2023-05-08T01:45:19Z</td>
+      <td>Mawar Merah</td>
+      <td>biarkan sj nt klo kalah lagi kan bisa dpt lebe...</td>
+      <td>1</td>
+      <td>[biarkan, sj, nt, klo, kalah, lagi, kan, bisa,...</td>
+      <td>[biarkan, sj, nt, klo, kalah, lagi, kan, bisa,...</td>
+      <td>[biarkan, sj, nt, klo, kalah, dpt, lebel, capr...</td>
+      <td>[biarkan, sj, nt, klo, kalah, dpt, lebel, capr...</td>
+      <td>[biar, sj, nt, klo, kalah, dpt, lebel, capres,...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2023-05-03T19:07:45Z</td>
+      <td>Fahmyksa</td>
+      <td>piring cantik</td>
+      <td>0</td>
+      <td>[piring, cantik]</td>
+      <td>[piring, cantik]</td>
+      <td>[piring, cantik]</td>
+      <td>[piring, cantik]</td>
+      <td>[piring, cantik]</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2023-05-03T16:36:40Z</td>
+      <td>sapu jagad</td>
+      <td>kalau tidak jadi mantri kmaren saya salud tapi...</td>
+      <td>1</td>
+      <td>[kalau, tidak, jadi, mantri, kmaren, saya, sal...</td>
+      <td>[kalau, tidak, jadi, mantri, kmaren, saya, sal...</td>
+      <td>[mantri, kmaren, salud, skarang, gak, la, suar...</td>
+      <td>[mantri, kmaren, salud, skarang, gak, la, suar...</td>
+      <td>[mantri, kmaren, salud, skarang, gak, la, suar...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2023-05-03T16:20:07Z</td>
+      <td>Afif Udin</td>
+      <td>prabowo yes</td>
+      <td>0</td>
+      <td>[prabowo, yes]</td>
+      <td>[prabowo, yes]</td>
+      <td>[prabowo, yes]</td>
+      <td>[prabowo, yes]</td>
+      <td>[prabowo, yes]</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2023-05-03T15:57:46Z</td>
+      <td>TAMI</td>
+      <td>pak prabowo thn ini sdh di samping pak jokowi ...</td>
+      <td>0</td>
+      <td>[pak, prabowo, thn, ini, sdh, di, samping, pak...</td>
+      <td>[pak, prabowo, thn, ini, sdh, di, samping, pak...</td>
+      <td>[prabowo, thn, sdh, samping, jokowi, beliaulah...</td>
+      <td>[prabowo, thn, sdh, samping, jokowi, beliaulah...</td>
+      <td>[prabowo, thn, sdh, samping, jokowi, biau, yg,...</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>2023-05-03T15:41:48Z</td>
+      <td>Mir Za</td>
+      <td>udh mulai kejang lagi pak ya</td>
+      <td>1</td>
+      <td>[udh, mulai, kejang, lagi, pak, ya]</td>
+      <td>[udh, mulai, kejang, lagi, pak, ya]</td>
+      <td>[udh, kejang, ya]</td>
+      <td>[udh, kejang, ya]</td>
+      <td>[udh, kejang, ya]</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>2023-05-03T15:32:30Z</td>
+      <td>Ummie Dhalfa</td>
+      <td>saya pilih pak prabowo  saya pilih pak anies</td>
+      <td>2</td>
+      <td>[saya, pilih, pak, prabowo, saya, pilih, pak, ...</td>
+      <td>[saya, pilih, pak, prabowo, saya, pilih, pak, ...</td>
+      <td>[pilih, prabowo, pilih, anies]</td>
+      <td>[pilih, prabowo, pilih, anies]</td>
+      <td>[pilih, prabowo, pilih, anies]</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>2023-05-06T06:25:36Z</td>
+      <td>Sahwan Firansyah</td>
+      <td>saya pilih dia kasian kalo kalah</td>
+      <td>0</td>
+      <td>[saya, pilih, dia, kasian, kalo, kalah]</td>
+      <td>[saya, pilih, dia, kasian, kalo, kalah]</td>
+      <td>[pilih, kasian, kalo, kalah]</td>
+      <td>[pilih, kasian, kalo, kalah]</td>
+      <td>[pilih, kasi, kalo, kalah]</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>2023-05-03T15:25:00Z</td>
+      <td>Yurnita bahar</td>
+      <td>wek wek semangat pak ganjarrrrrr</td>
+      <td>0</td>
+      <td>[wek, wek, semangat, pak, ganjarrrrrr]</td>
+      <td>[wek, wek, semangat, pak, ganjarrrrrr]</td>
+      <td>[wek, wek, semangat, ganjarrrrrr]</td>
+      <td>[wek, wek, semangat, ganjarrrrrr]</td>
+      <td>[wek, wek, semangat, ganjarrrrrr]</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>2023-05-03T15:23:43Z</td>
+      <td>faisal abdillah</td>
+      <td>jngn mau kalo jadi cawapress</td>
+      <td>0</td>
+      <td>[jngn, mau, kalo, jadi, cawapress]</td>
+      <td>[jngn, mau, kalo, jadi, cawapress]</td>
+      <td>[jngn, kalo, cawapress]</td>
+      <td>[jngn, kalo, cawapress]</td>
+      <td>[jngn, kalo, cawapress]</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>2023-05-03T14:46:36Z</td>
+      <td>Iqbal Raya Pratama</td>
+      <td>ridwan kamil yakin menang</td>
+      <td>0</td>
+      <td>[ridwan, kamil, yakin, menang]</td>
+      <td>[ridwan, kamil, yakin, menang]</td>
+      <td>[ridwan, kamil, menang]</td>
+      <td>[ridwan, kamil, menang]</td>
+      <td>[ridwan, kamil, menang]</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>2023-05-03T14:43:48Z</td>
+      <td>I Am GoVlog</td>
+      <td>agak mudaan dikit lah   kalo ketuaan ntar mala...</td>
+      <td>1</td>
+      <td>[agak, mudaan, dikit, lah, kalo, ketuaan, ntar...</td>
+      <td>[agak, mudaan, dikit, lah, kalo, ketuaan, ntar...</td>
+      <td>[mudaan, dikit, kalo, ketuaan, ntar, kek, om, ...</td>
+      <td>[mudaan, dikit, kalo, ketuaan, ntar, kek, om, ...</td>
+      <td>[muda, dikit, kalo, ketua, ntar, kek, om, bide...</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>2023-05-08T01:47:43Z</td>
+      <td>Mawar Merah</td>
+      <td>biarkan sj mas karena ambisi nya sdh smp ke ub...</td>
+      <td>1</td>
+      <td>[biarkan, sj, mas, karena, ambisi, nya, sdh, s...</td>
+      <td>[biarkan, sj, mas, karena, ambisi, nya, sdh, s...</td>
+      <td>[biarkan, sj, mas, ambisi, nya, sdh, smp, ubun...</td>
+      <td>[biarkan, sj, mas, ambisi, nya, sdh, smp, ubun...</td>
+      <td>[biar, sj, mas, ambisi, nya, sdh, smp, ubun, k...</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>2023-05-03T14:41:27Z</td>
+      <td>Samui Japan</td>
+      <td>tetap berjuang dan istiqomah bersama rakyat pa...</td>
+      <td>0</td>
+      <td>[tetap, berjuang, dan, istiqomah, bersama, rak...</td>
+      <td>[tetap, berjuang, dan, istiqomah, bersama, rak...</td>
+      <td>[berjuang, istiqomah, rakyat, prabowo, pribadi...</td>
+      <td>[berjuang, istiqomah, rakyat, prabowo, pribadi...</td>
+      <td>[juang, istiqomah, rakyat, prabowo, pribadi, d...</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>2023-05-03T14:33:06Z</td>
+      <td>Abdul Komus</td>
+      <td>ps     bisa yoo</td>
+      <td>0</td>
+      <td>[ps, bisa, yoo]</td>
+      <td>[ps, bisa, yoo]</td>
+      <td>[ps, yoo]</td>
+      <td>[ps, yoo]</td>
+      <td>[ps, yoo]</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-fcd6b2f2-e029-4f96-bd44-6d36a5e09187')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-fcd6b2f2-e029-4f96-bd44-6d36a5e09187 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-fcd6b2f2-e029-4f96-bd44-6d36a5e09187');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+</div>
+<div class="section" id="pembobotan-kata">
+<h1><strong>Pembobotan Kata</strong><a class="headerlink" href="#pembobotan-kata" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">joinkata</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+  <span class="n">kalimat</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="n">kalimat</span> <span class="o">+=</span> <span class="n">i</span>
+    <span class="n">kalimat</span> <span class="o">+=</span> <span class="s2">&quot; &quot;</span>
+  <span class="k">return</span> <span class="n">kalimat</span>
+
+<span class="n">text</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;stemming&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">swifter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">joinkata</span><span class="p">)</span>
+<span class="n">text</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "f3117011bc774633870d1260e15928c9"}</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     klo kali pilih prabowo yg ikhlas n lapang dada...
+1     sak karepmu kono wowo br kelg besar jakarta am...
+2     percaya muka haus jabat dah luntur percaya rak...
+3                      mantaaap prabowo presiden amiin 
+4                               nggak tau malu si wowo 
+5     biar sj nt klo kalah dpt lebel capres abadi th...
+6                                        piring cantik 
+7     mantri kmaren salud skarang gak la suara kmai ...
+8                                          prabowo yes 
+9     prabowo thn sdh samping jokowi biau yg erti ma...
+10                                       udh kejang ya 
+11                           pilih prabowo pilih anies 
+12                               pilih kasi kalo kalah 
+13                        wek wek semangat ganjarrrrrr 
+14                                 jngn kalo cawapress 
+15                                 ridwan kamil menang 
+16    muda dikit kalo ketua ntar kek om biden pidato...
+17    biar sj mas ambisi nya sdh smp ubun ken plecid...
+18    juang istiqomah rakyat prabowo pribadi dukung ...
+19                                              ps yoo 
+20    sak karepmu angel angel angel angel tenan tutu...
+21                           merah pleciden plecidenan 
+22    pancen yo koyo ngono kuwi wes angel br ora nya...
+23                                         prabowo yes 
+24                                maju lawan jan ethes 
+25                                              wkwkwk 
+26                                               ganjr 
+27          maju serah serah pilih capres yg istri nya 
+28                                        maju prabowo 
+29    nyapres trs brow ttap satu padu tumbang mu smg...
+30                 merah kali menang karna raykat kasi 
+31    firansyah awas ya br kalo kalih jgn nang ya br...
+32                                      prabowo menang 
+33                      x ndukung beliau ganti yg muda 
+Name: stemming, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">RegexpTokenizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">TruncatedSVD</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vectorize document using TF-IDF</span>
+<span class="n">tfidf</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">lowercase</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                        <span class="n">stop_words</span><span class="o">=</span><span class="s1">&#39;english&#39;</span><span class="p">,</span>
+                        <span class="n">ngram_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+                       
+<span class="c1"># Fit and Transform the documents</span>
+<span class="n">train_data</span> <span class="o">=</span> <span class="n">tfidf</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>   
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#bobot kata terhadap masing masing topik</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">train_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  (0, 88)	0.3596704258911336
+  (0, 124)	0.3596704258911336
+  (0, 27)	0.3596704258911336
+  (0, 83)	0.3596704258911336
+  (0, 48)	0.3596704258911336
+  (0, 181)	0.25736131201112256
+  (0, 134)	0.19281144800269298
+  (0, 129)	0.24300591145734948
+  (0, 61)	0.3219111760195521
+  (0, 73)	0.2951205618827041
+  (1, 107)	0.1215739785722698
+  (1, 46)	0.1215739785722698
+  (1, 156)	0.2431479571445396
+  (1, 100)	0.1215739785722698
+  (1, 31)	0.1215739785722698
+  (1, 101)	0.1215739785722698
+  (1, 125)	0.1215739785722698
+  (1, 147)	0.09975515995697702
+  (1, 155)	0.1215739785722698
+  (1, 26)	0.1215739785722698
+  (1, 20)	0.1215739785722698
+  (1, 49)	0.10881078787228682
+  (1, 139)	0.09273106924746291
+  (1, 148)	0.2431479571445396
+  (1, 59)	0.10881078787228682
+  :	:
+  (30, 97)	0.36417928256864474
+  (30, 67)	0.3972389466384376
+  (30, 61)	0.3972389466384376
+  (31, 82)	0.19735449860211865
+  (31, 34)	0.19735449860211865
+  (31, 45)	0.19735449860211865
+  (31, 106)	0.19735449860211865
+  (31, 56)	0.19735449860211865
+  (31, 62)	0.19735449860211865
+  (31, 12)	0.19735449860211865
+  (31, 39)	0.19735449860211865
+  (31, 63)	0.1505329832180527
+  (31, 178)	0.3532712959668624
+  (31, 1)	0.1505329832180527
+  (31, 24)	0.14121653890696098
+  (31, 49)	0.1766356479834312
+  (31, 139)	0.1505329832180527
+  (31, 21)	0.6666979873893252
+  (32, 97)	0.8371670474432471
+  (32, 134)	0.5469472869254915
+  (33, 44)	0.4930166050965771
+  (33, 108)	0.4930166050965771
+  (33, 15)	0.4412582845825762
+  (33, 104)	0.4412582845825762
+  (33, 181)	0.35277685124250413
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_tfidf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">train_data</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;D</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">))],</span> <span class="n">index</span><span class="o">=</span><span class="n">tfidf</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
+<span class="p">)</span>
+<span class="n">df_tfidf</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-0885724f-078c-4bde-9c92-3932b6fc09b6">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>D1</th>
+      <th>D2</th>
+      <th>D3</th>
+      <th>D4</th>
+      <th>D5</th>
+      <th>D6</th>
+      <th>D7</th>
+      <th>D8</th>
+      <th>D9</th>
+      <th>D10</th>
+      <th>...</th>
+      <th>D25</th>
+      <th>D26</th>
+      <th>D27</th>
+      <th>D28</th>
+      <th>D29</th>
+      <th>D30</th>
+      <th>D31</th>
+      <th>D32</th>
+      <th>D33</th>
+      <th>D34</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>aamiin</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.257441</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>abadi</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.269513</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.150533</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>aja</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.316228</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>ambisi</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>amiin</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.551538</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>yen</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>yes</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.857887</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>yg</th>
+      <td>0.257361</td>
+      <td>0.086992</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.218595</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.255173</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.352777</td>
+    </tr>
+    <tr>
+      <th>yo</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>yoo</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+    </tr>
+  </tbody>
+</table>
+<p>184 rows × 34 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-0885724f-078c-4bde-9c92-3932b6fc09b6')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-0885724f-078c-4bde-9c92-3932b6fc09b6 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-0885724f-078c-4bde-9c92-3932b6fc09b6');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+</div>
+<div class="section" id="latent-semantic-indexing-using-scikit-learn">
+<h1><strong>Latent Semantic Indexing using Scikit-Learn</strong><a class="headerlink" href="#latent-semantic-indexing-using-scikit-learn" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="c1"># Define the number of topics or components</span>
+<span class="n">num_components</span><span class="o">=</span><span class="mi">10</span>
+
+<span class="c1"># Create SVD object</span>
+<span class="n">lsa</span> <span class="o">=</span> <span class="n">TruncatedSVD</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="n">num_components</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Fit SVD model on data</span>
+<span class="n">lsa</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">train_data</span><span class="p">)</span>
+
+<span class="c1"># Get Singular values and Components </span>
+<span class="n">Sigma</span> <span class="o">=</span> <span class="n">lsa</span><span class="o">.</span><span class="n">singular_values_</span> 
+<span class="n">V_transpose</span> <span class="o">=</span> <span class="n">lsa</span><span class="o">.</span><span class="n">components_</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print the topics with their terms</span>
+<span class="n">terms</span> <span class="o">=</span> <span class="n">tfidf</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
+
+<span class="c1"># bobot setiap topik terhadap  dokumen</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">component</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lsa</span><span class="o">.</span><span class="n">components_</span><span class="p">):</span>
+    <span class="n">zipped</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">terms</span><span class="p">,</span> <span class="n">component</span><span class="p">)</span>
+    <span class="n">top_terms_key</span><span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="n">zipped</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
+    <span class="n">top_terms_list</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">top_terms_key</span><span class="p">)</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Topic &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;: &quot;</span><span class="p">,</span><span class="n">top_terms_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Topic 0:  [&#39;prabowo&#39;, &#39;yes&#39;, &#39;maju&#39;, &#39;menang&#39;, &#39;pilih&#39;]
+Topic 1:  [&#39;br&#39;, &#39;kalah&#39;, &#39;capres&#39;, &#39;abadi&#39;, &#39;biar&#39;]
+Topic 2:  [&#39;menang&#39;, &#39;pilih&#39;, &#39;kasi&#39;, &#39;kalo&#39;, &#39;merah&#39;]
+Topic 3:  [&#39;menang&#39;, &#39;kamil&#39;, &#39;ridwan&#39;, &#39;yes&#39;, &#39;merah&#39;]
+Topic 4:  [&#39;maju&#39;, &#39;menang&#39;, &#39;ethes&#39;, &#39;jan&#39;, &#39;lawan&#39;]
+Topic 5:  [&#39;rakyat&#39;, &#39;beliau&#39;, &#39;amp&#39;, &#39;angel&#39;, &#39;ganjar&#39;]
+Topic 6:  [&#39;kalo&#39;, &#39;cawapress&#39;, &#39;jngn&#39;, &#39;dikit&#39;, &#39;muda&#39;]
+Topic 7:  [&#39;beliau&#39;, &#39;yg&#39;, &#39;ganti&#39;, &#39;ndukung&#39;, &#39;muda&#39;]
+Topic 8:  [&#39;merah&#39;, &#39;plecidenan&#39;, &#39;pleciden&#39;, &#39;angel&#39;, &#39;yes&#39;]
+Topic 9:  [&#39;ya&#39;, &#39;kejang&#39;, &#39;udh&#39;, &#39;merah&#39;, &#39;plecidenan&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tugas6.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>Tugas PAGERANK</strong></p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Tugas Crawling Komentar Youtube</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing"><strong>Preprocessing</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#word-normalization">Word Normalization</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#stopwords-removal"><strong>Stopwords Removal</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#stemming"><strong>Stemming</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pembobotan-kata"><strong>Pembobotan Kata</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#latent-semantic-indexing-using-scikit-learn"><strong>Latent Semantic Indexing using Scikit-Learn</strong></a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By 20 - 156 Purnomo Ribut
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
